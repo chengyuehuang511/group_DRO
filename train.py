@@ -80,6 +80,47 @@ def run_epoch(epoch, model, optimizer, loader, loss_computer, logger, csv_logger
                 loss_computer.reset_stats()
 
 
+def test(model, criterion, dataset, logger, args, show_progress=False):
+    model.eval()
+
+    loss_computer = LossComputer(
+        criterion,
+        is_robust=args.robust,
+        dataset=dataset['test_data'],
+        step_size=args.robust_step_size,
+        alpha=args.alpha)
+
+    loader = dataset['test_loader']
+    if show_progress:
+        prog_bar_loader = tqdm(loader)
+    else:
+        prog_bar_loader = loader
+
+    with torch.set_grad_enabled(False):
+        for batch_idx, batch in enumerate(prog_bar_loader):
+
+            batch = tuple(t.cuda() for t in batch)
+            x = batch[0]
+            y = batch[1]
+            g = batch[2]
+            if args.model == 'bert':
+                input_ids = x[:, :, 0]
+                input_masks = x[:, :, 1]
+                segment_ids = x[:, :, 2]
+                outputs = model(
+                    input_ids=input_ids,
+                    attention_mask=input_masks,
+                    token_type_ids=segment_ids,
+                    labels=y
+                )[1] # [1] returns logits
+            else:
+                outputs = model(x)
+
+            loss_main = loss_computer.loss(outputs, y, g, False)
+
+        loss_computer.log_stats(logger, False)
+
+
 def train(model, criterion, dataset,
           logger, train_csv_logger, val_csv_logger, test_csv_logger,
           args, epoch_offset):

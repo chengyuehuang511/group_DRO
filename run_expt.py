@@ -8,7 +8,7 @@ import torchvision
 from models import model_attributes
 from data.data import dataset_attributes, shift_types, prepare_data, log_data
 from utils import set_seed, Logger, CSVBatchLogger, log_args
-from train import train
+from train import train, test
 
 
 def main():
@@ -22,6 +22,8 @@ def main():
     parser.add_argument('-c', '--confounder_names', nargs='+')
     # Resume?
     parser.add_argument('--resume', default=False, action='store_true')
+    # Test
+    parser.add_argument('--inference', default=False, action='store_true')
     # Label shifts
     parser.add_argument('--minority_fraction', type=float)
     parser.add_argument('--imbalance_ratio', type=float)
@@ -60,6 +62,7 @@ def main():
     parser.add_argument('--seed', type=int, default=0)
     parser.add_argument('--show_progress', default=False, action='store_true')
     parser.add_argument('--log_dir', default='./logs')
+    parser.add_argument('--checkpoint_dir', default='./logs_a40')
     parser.add_argument('--log_every', default=50, type=int)
     parser.add_argument('--save_step', type=int, default=10)
     parser.add_argument('--save_best', action='store_true', default=False)
@@ -122,6 +125,8 @@ def main():
     if resume:
         model = torch.load(os.path.join(args.log_dir, 'last_model.pth'))
         d = train_data.input_size()[0]
+    elif args.inference:
+        model = torch.load(os.path.join(args.checkpoint_dir, 'best_model.pth'))
     elif model_attributes[args.model]['feature_type'] in ('precomputed', 'raw_flattened'):
         assert pretrained
         # Load precomputed features
@@ -179,6 +184,9 @@ def main():
         df = pd.read_csv(os.path.join(args.log_dir, 'test.csv'))
         epoch_offset = df.loc[len(df)-1,'epoch']+1
         logger.write(f'starting from epoch {epoch_offset}')
+    elif args.inference:
+        test(model, criterion, data, logger, args, show_progress=args.show_progress)
+        return
     else:
         epoch_offset=0
     train_csv_logger = CSVBatchLogger(os.path.join(args.log_dir, 'train.csv'), train_data.n_groups, mode=mode)
