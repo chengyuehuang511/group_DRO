@@ -1,4 +1,5 @@
 import os
+import sys
 import types
 
 import torch
@@ -7,6 +8,7 @@ import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader, Subset
 
 import numpy as np
+import pandas as pd
 from tqdm import tqdm
 
 from utils import AverageMeter, accuracy
@@ -96,6 +98,10 @@ def test(model, criterion, dataset, logger, args, show_progress=False):
     else:
         prog_bar_loader = loader
 
+    all_predictions = []
+    all_aux_labels = []
+    all_labels = []
+
     with torch.set_grad_enabled(False):
         for batch_idx, batch in enumerate(prog_bar_loader):
 
@@ -116,9 +122,94 @@ def test(model, criterion, dataset, logger, args, show_progress=False):
             else:
                 outputs = model(x)
 
+            all_predictions.append(torch.argmax(outputs, 1).detach().cpu())
+            all_aux_labels.append(g.detach().cpu())
+            all_labels.append(y.detach().cpu())
+            
             loss_main = loss_computer.loss(outputs, y, g, False)
 
         loss_computer.log_stats(logger, False)
+
+    all_predictions = torch.cat(all_predictions)
+    all_aux_labels = torch.cat(all_aux_labels)
+    all_labels = torch.cat(all_labels)
+
+    grad_norm, loss = feat_norm(model, prog_bar_loader, criterion, if_grad=True, flatten=False)
+    # feat_norm = feat_norm(model, prog_bar_loader, criterion, if_grad=False, flatten=False)
+    
+    d = {}
+
+    d['labels'] = all_labels.cpu()
+    d['predictions'] = all_predictions.cpu()
+    d['aux_labels'] = all_aux_labels.cpu()
+
+    d['loss'] = loss
+    d['grad_norm'] = grad_norm.cpu()
+    # d['feat_norm'] = feat_norm.cpu()
+    df = pd.DataFrame(d)
+    df.to_csv('output_test_grad_loss.csv', index=True)
+
+
+def feat_norm(model, data_loader, criterion, feat_type='top', flatten=False, if_grad=False, choose_gradients="last_block"):
+    norm_list = []
+    loss_list = []
+    for test_data in data_loader:
+        test_inputs, test_targets = test_data[0].cuda(), test_data[1].cuda()
+        if if_grad:
+            test_features, loss_test = get_grad_loss(model, test_inputs, test_targets, criterion, choose_gradients=choose_gradients, flatten=flatten)
+            norm = torch.norm(F.relu(test_features), dim=[3,4]).mean(1).mean(1)  # [128, 64, 3, 7, 7]
+        else:
+            test_features = get_feature(model, test_inputs, feat_type=feat_type, flatten=flatten)
+            norm = torch.norm(F.relu(test_features), dim=[2,3]).mean(1)  # [128, 2048, 7, 7]
+        
+        # print(norm.shape)
+        norm_list.append(norm.data)
+
+        if if_grad:
+            loss_list += loss_test
+
+    if if_grad:
+        return torch.cat(norm_list, dim=0), loss_list
+    return torch.cat(norm_list, dim=0)
+
+
+def get_grad_loss(model, test_data, targets, loss_function, choose_gradients="last_block", flatten=False):
+    grads_list = []
+    loss_list = []
+    for i, (test_data_each, targets_each) in tqdm(enumerate(zip(test_data, targets)), leave=False):
+        test_data_each = test_data_each.unsqueeze(0)
+        targets_each = targets_each.unsqueeze(0)
+        predictions = model(test_data_each)
+        loss = loss_function(predictions, targets_each)
+        loss_list.append(loss.item())
+        if choose_gradients == "last_block":
+            block = nn.Sequential(*list(model.children())[-1:])  # TODO
+            grads = torch.autograd.grad(loss, [param for param in block.parameters()])[0]
+        elif choose_gradients == "all":
+            grads = torch.autograd.grad(loss, [param for param in model.parameters()])[0]
+        
+        if flatten:
+            grads_list.append(grads.view(1, -1))
+        else:
+            grads_list.append(grads.unsqueeze(0))  # [64, 3, 7, 7] -> [1, 64, 3, 7, 7]
+    
+    grads_list = torch.cat(grads_list, dim=0)
+    return grads_list, loss_list
+
+
+def get_feature(model, x, feat_type='top', flatten=True):
+    if feat_type == 'x':
+        if flatten == False:
+            return x
+        return x.view(x.size(0), -1)
+    elif feat_type == 'top':
+        feature_layers = nn.Sequential(*list(model.children())[:-1])  # TODO
+        feat = feature_layers(x)
+        if flatten == False:
+            return feat
+        return feat.view(feat.size(0), -1)
+    else:
+        sys.exit(1)
 
 
 def train(model, criterion, dataset,

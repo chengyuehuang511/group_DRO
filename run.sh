@@ -2,7 +2,7 @@
 cd /nethome/chuang475/flash/projects/group_DRO
 
 /nethome/chuang475/miniconda3/envs/ftp/bin/python3.8 -m run_expt \
-                    --root_dir /nethome/chuang475/flash/projects/group_DRO/ \
+                    --root_dir ./ \
                     -s confounder \
                     -d CUB \
                     -t waterbird_complete95 \
@@ -16,5 +16,6 @@ cd /nethome/chuang475/flash/projects/group_DRO
                     --save_best \
                     --save_last \
                     --show_progress \
-                    --log_dir /nethome/chuang475/flash/projects/group_DRO/logs_test \
+                    --log_dir ./logs_test \
+                    --checkpoint_dir ./logs_a40 \
                     --inference
