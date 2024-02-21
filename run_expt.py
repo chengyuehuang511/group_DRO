@@ -185,7 +185,7 @@ def main():
         epoch_offset = df.loc[len(df)-1,'epoch']+1
         logger.write(f'starting from epoch {epoch_offset}')
     elif args.inference:
-        test(model, criterion, data, logger, args, show_progress=args.show_progress)
+        test(model, criterion, data, logger, args, show_progress=args.show_progress, split="test", uniform_loss=True)
         return
     else:
         epoch_offset=0

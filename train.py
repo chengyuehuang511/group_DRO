@@ -82,17 +82,19 @@ def run_epoch(epoch, model, optimizer, loader, loss_computer, logger, csv_logger
                 loss_computer.reset_stats()
 
 
-def test(model, criterion, dataset, logger, args, show_progress=False):
+def test(model, criterion, dataset, logger, args, show_progress=False, split="test", uniform_loss=False):
     model.eval()
+
+    dataset_split = dataset[split + '_data']
+    loader = dataset[split + '_loader']
 
     loss_computer = LossComputer(
         criterion,
         is_robust=args.robust,
-        dataset=dataset['test_data'],
+        dataset=dataset_split,
         step_size=args.robust_step_size,
         alpha=args.alpha)
 
-    loader = dataset['test_loader']
     if show_progress:
         prog_bar_loader = tqdm(loader)
     else:
@@ -134,8 +136,8 @@ def test(model, criterion, dataset, logger, args, show_progress=False):
     all_aux_labels = torch.cat(all_aux_labels)
     all_labels = torch.cat(all_labels)
 
-    grad_norm, loss = feat_norm(model, prog_bar_loader, criterion, if_grad=True, flatten=False)
-    # feat_norm = feat_norm(model, prog_bar_loader, criterion, if_grad=False, flatten=False)
+    grad_norm, loss = feat_norm(model, prog_bar_loader, criterion, if_grad=True, flatten=False, uniform_loss=uniform_loss)
+    # feat = feat_norm(model, prog_bar_loader, criterion, if_grad=False, flatten=False)
     
     d = {}
 
@@ -145,19 +147,20 @@ def test(model, criterion, dataset, logger, args, show_progress=False):
 
     d['loss'] = loss
     d['grad_norm'] = grad_norm.cpu()
-    # d['feat_norm'] = feat_norm.cpu()
+    # d['feat_norm'] = feat.cpu()
     df = pd.DataFrame(d)
-    df.to_csv('output_test_grad_loss.csv', index=True)
+    df.to_csv('output_test_grad_loss_uniform.csv', index=True)
 
 
-def feat_norm(model, data_loader, criterion, feat_type='top', flatten=False, if_grad=False, choose_gradients="last_block"):
+def feat_norm(model, data_loader, criterion, feat_type='top', flatten=False, if_grad=False, choose_gradients="last_block", uniform_loss=False):
     norm_list = []
     loss_list = []
     for test_data in data_loader:
         test_inputs, test_targets = test_data[0].cuda(), test_data[1].cuda()
         if if_grad:
-            test_features, loss_test = get_grad_loss(model, test_inputs, test_targets, criterion, choose_gradients=choose_gradients, flatten=flatten)
-            norm = torch.norm(F.relu(test_features), dim=[3,4]).mean(1).mean(1)  # [128, 64, 3, 7, 7]
+            test_features, loss_test = get_grad_loss(model, test_inputs, test_targets, criterion, choose_gradients=choose_gradients, flatten=flatten, uniform_loss=uniform_loss)
+            # print(test_features.shape)
+            norm = torch.norm(test_features, dim=[1,2])  # [128, 2, 2048], [128, 64, 3, 7, 7]
         else:
             test_features = get_feature(model, test_inputs, feat_type=feat_type, flatten=flatten)
             norm = torch.norm(F.relu(test_features), dim=[2,3]).mean(1)  # [128, 2048, 7, 7]
@@ -173,14 +176,21 @@ def feat_norm(model, data_loader, criterion, feat_type='top', flatten=False, if_
     return torch.cat(norm_list, dim=0)
 
 
-def get_grad_loss(model, test_data, targets, loss_function, choose_gradients="last_block", flatten=False):
+def get_grad_loss(model, test_data, targets, loss_function, choose_gradients="last_block", flatten=False, uniform_loss=False):
     grads_list = []
     loss_list = []
     for i, (test_data_each, targets_each) in tqdm(enumerate(zip(test_data, targets)), leave=False):
         test_data_each = test_data_each.unsqueeze(0)
         targets_each = targets_each.unsqueeze(0)
         predictions = model(test_data_each)
-        loss = loss_function(predictions, targets_each)
+        if uniform_loss:
+            targets = torch.ones((test_data_each.shape[0], 2)).cuda()  # TODO
+            temp = 1
+            predictions = predictions / temp
+            logsoftmax = torch.nn.LogSoftmax(dim=-1).cuda()
+            loss = torch.mean(torch.sum(-targets * logsoftmax(predictions), dim=-1))
+        else:
+            loss = loss_function(predictions, targets_each)
         loss_list.append(loss.item())
         if choose_gradients == "last_block":
             block = nn.Sequential(*list(model.children())[-1:])  # TODO

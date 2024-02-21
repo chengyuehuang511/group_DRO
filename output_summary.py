@@ -60,13 +60,13 @@ if __name__ == "__main__":
     #     print(f"=====Group {i} {(len(g))}=====")
     #     print(g['loss'].mean())
 
-    output = pd.read_csv("output_test_grad_loss_feat.csv", index_col=0)
-    g1 = output[(output['labels'] == 0) & (output['aux_labels'] == 0)]
-    g2 = output[(output['labels'] == 0) & (output['aux_labels'] == 1)]  #
-    g3 = output[(output['labels'] == 1) & (output['aux_labels'] == 0)]  #
-    g4 = output[(output['labels'] == 1) & (output['aux_labels'] == 1)]
+    output = pd.read_csv("output_test_grad_loss_uniform.csv", index_col=0)
+    g1 = output[(output['aux_labels'] == 0)]
+    g2 = output[(output['aux_labels'] == 1)]  #
+    g3 = output[(output['aux_labels'] == 2)]  #
+    g4 = output[(output['aux_labels'] == 3)]
 
-    for col in ["feat_norm", "grad_norm", "loss"]:
+    for col in ["grad_norm", "loss"]:
         print(f"========== {col} ==========")
         for i, g in enumerate([output, g1, g2, g3, g4]):
             print(f"=====Group {i} {(len(g))}=====")

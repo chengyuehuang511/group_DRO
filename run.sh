@@ -16,6 +16,6 @@ cd /nethome/chuang475/flash/projects/group_DRO
                     --save_best \
                     --save_last \
                     --show_progress \
-                    --log_dir ./logs_test \
-                    --checkpoint_dir ./logs_a40 \
-                    --inference
+                    --log_dir ./logs_sanity_check \
+                    # --checkpoint_dir ./logs_a40 \
+                    # --inference
