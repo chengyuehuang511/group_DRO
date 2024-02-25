@@ -10,14 +10,16 @@ from torch.utils.data import Dataset, DataLoader, Subset
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
+from torch.func import functional_call, vmap, grad
 
-from utils import AverageMeter, accuracy
+from utils import AverageMeter, accuracy, set_seed
 from loss import LossComputer
 
 from pytorch_transformers import AdamW, WarmupLinearSchedule
 
-def run_epoch(epoch, model, optimizer, loader, loss_computer, logger, csv_logger, args,
-              is_training, show_progress=False, log_every=50, scheduler=None):
+def run_epoch(d, epoch, model, optimizer, loader, loss_computer, logger, csv_logger, args,
+              is_training, show_progress=False, log_every=50, scheduler=None, criterion=None,
+              print_grad_loss=False, print_feat=False, uniform_loss=False):
     """
     scheduler is only used inside this function if model is bert.
     """
@@ -33,6 +35,11 @@ def run_epoch(epoch, model, optimizer, loader, loss_computer, logger, csv_logger
         prog_bar_loader = tqdm(loader)
     else:
         prog_bar_loader = loader
+    
+    all_predictions = []
+    if epoch == 0:
+        all_aux_labels = []
+        all_labels = []
 
     with torch.set_grad_enabled(is_training):
         for batch_idx, batch in enumerate(prog_bar_loader):
@@ -41,6 +48,7 @@ def run_epoch(epoch, model, optimizer, loader, loss_computer, logger, csv_logger
             x = batch[0]
             y = batch[1]
             g = batch[2]
+            # print(g)
             if args.model == 'bert':
                 input_ids = x[:, :, 0]
                 input_masks = x[:, :, 1]
@@ -53,8 +61,18 @@ def run_epoch(epoch, model, optimizer, loader, loss_computer, logger, csv_logger
                 )[1] # [1] returns logits
             else:
                 outputs = model(x)
+            
+            if epoch == 0:
+                all_aux_labels.append(g.detach().cpu())
+                all_labels.append(y.detach().cpu())
+            all_predictions.append(torch.argmax(outputs, 1).detach().cpu())
 
+            # 1
             loss_main = loss_computer.loss(outputs, y, g, is_training)
+            
+            # same
+            # print(loss_main)
+            # print(criterion(outputs, y).mean())
 
             if is_training:
                 if args.model == 'bert':
@@ -69,17 +87,48 @@ def run_epoch(epoch, model, optimizer, loader, loss_computer, logger, csv_logger
                     optimizer.step()
 
             if is_training and (batch_idx+1) % log_every==0:
+                # 2
                 csv_logger.log(epoch, batch_idx, loss_computer.get_stats(model, args))
                 csv_logger.flush()
+                # 3
                 loss_computer.log_stats(logger, is_training)
+                # 4
                 loss_computer.reset_stats()
 
         if (not is_training) or loss_computer.batch_count > 0:
             csv_logger.log(epoch, batch_idx, loss_computer.get_stats(model, args))
+            # print("epoch: {}, batch: {}".format(epoch, batch_idx))
             csv_logger.flush()
             loss_computer.log_stats(logger, is_training)
             if is_training:
                 loss_computer.reset_stats()
+    
+    all_predictions = torch.cat(all_predictions)
+    
+    if epoch == 0:
+        all_aux_labels = torch.cat(all_aux_labels)
+        all_labels = torch.cat(all_labels)
+
+        d['labels'] = all_labels.cpu()
+        d['aux_labels'] = all_aux_labels.cpu()
+
+    d[f'predictions_{epoch}'] = all_predictions.cpu()
+    
+    # model.eval()  # important!!!
+    if print_grad_loss:
+        grad_norm, loss = feat_norm(model, loader, criterion, if_grad=True, flatten=False, uniform_loss=uniform_loss)
+        d[f'loss_{epoch}'] = loss.cpu()
+        d[f'grad_norm_{epoch}'] = grad_norm.cpu()
+        # print("loss: {}".format(loss[-128:]))
+
+    if print_feat:
+        feat = feat_norm(model, loader, criterion, if_grad=False, flatten=False)
+        d[f'feat_norm_{epoch}'] = feat.cpu()
+    
+    # print("loss main: {}".format(loss_main))
+    # print("loss last batch: {}".format(loss[-outputs.shape[0]:].mean()))
+
+    # print("output: {}".format(outputs))
 
 
 def test(model, criterion, dataset, logger, args, show_progress=False, split="test", uniform_loss=False):
@@ -111,6 +160,7 @@ def test(model, criterion, dataset, logger, args, show_progress=False, split="te
             x = batch[0]
             y = batch[1]
             g = batch[2]
+            # print(g)
             if args.model == 'bert':
                 input_ids = x[:, :, 0]
                 input_masks = x[:, :, 1]
@@ -149,17 +199,21 @@ def test(model, criterion, dataset, logger, args, show_progress=False, split="te
     d['grad_norm'] = grad_norm.cpu()
     # d['feat_norm'] = feat.cpu()
     df = pd.DataFrame(d)
-    df.to_csv('output_test_grad_loss_uniform.csv', index=True)
+    df.to_csv(f'output_{split}_grad_loss_tmp_epoch1.csv', index=True)
 
 
 def feat_norm(model, data_loader, criterion, feat_type='top', flatten=False, if_grad=False, choose_gradients="last_block", uniform_loss=False):
     norm_list = []
     loss_list = []
-    for test_data in data_loader:
+    for i, test_data in enumerate(tqdm(data_loader)):
         test_inputs, test_targets = test_data[0].cuda(), test_data[1].cuda()
         if if_grad:
             test_features, loss_test = get_grad_loss(model, test_inputs, test_targets, criterion, choose_gradients=choose_gradients, flatten=flatten, uniform_loss=uniform_loss)
             # print(test_features.shape)
+            # if i == len(data_loader)-1:
+            #     print("bach: {}".format(i))
+            #     print("pred: {}".format(pred))
+            #     print("pred_all: {}".format(pred_all))
             norm = torch.norm(test_features, dim=[1,2])  # [128, 2, 2048], [128, 64, 3, 7, 7]
         else:
             test_features = get_feature(model, test_inputs, feat_type=feat_type, flatten=flatten)
@@ -169,42 +223,46 @@ def feat_norm(model, data_loader, criterion, feat_type='top', flatten=False, if_
         norm_list.append(norm.data)
 
         if if_grad:
-            loss_list += loss_test
+            loss_list.append(loss_test.data)
 
     if if_grad:
-        return torch.cat(norm_list, dim=0), loss_list
+        return torch.cat(norm_list, dim=0), torch.cat(loss_list, dim=0)
     return torch.cat(norm_list, dim=0)
 
 
 def get_grad_loss(model, test_data, targets, loss_function, choose_gradients="last_block", flatten=False, uniform_loss=False):
-    grads_list = []
-    loss_list = []
-    for i, (test_data_each, targets_each) in tqdm(enumerate(zip(test_data, targets)), leave=False):
-        test_data_each = test_data_each.unsqueeze(0)
-        targets_each = targets_each.unsqueeze(0)
-        predictions = model(test_data_each)
-        if uniform_loss:
-            targets = torch.ones((test_data_each.shape[0], 2)).cuda()  # TODO
-            temp = 1
-            predictions = predictions / temp
-            logsoftmax = torch.nn.LogSoftmax(dim=-1).cuda()
-            loss = torch.mean(torch.sum(-targets * logsoftmax(predictions), dim=-1))
-        else:
-            loss = loss_function(predictions, targets_each)
-        loss_list.append(loss.item())
-        if choose_gradients == "last_block":
-            block = nn.Sequential(*list(model.children())[-1:])  # TODO
-            grads = torch.autograd.grad(loss, [param for param in block.parameters()])[0]
-        elif choose_gradients == "all":
-            grads = torch.autograd.grad(loss, [param for param in model.parameters()])[0]
-        
-        if flatten:
-            grads_list.append(grads.view(1, -1))
-        else:
-            grads_list.append(grads.unsqueeze(0))  # [64, 3, 7, 7] -> [1, 64, 3, 7, 7]
+    predictions = model(test_data)
+    if uniform_loss:
+        targets_uni = torch.ones((test_data.shape[0], 2)).cuda()  # TODO
+        temp = 1
+        predictions = predictions / temp
+        logsoftmax = torch.nn.LogSoftmax(dim=-1).cuda()
+        loss = torch.sum(-targets_uni * logsoftmax(predictions), dim=-1)
+        # print(loss)
+    else:
+        loss = loss_function(predictions, targets)
     
-    grads_list = torch.cat(grads_list, dim=0)
-    return grads_list, loss_list
+    eye = torch.eye(loss.shape[0], device=loss.device)
+    if choose_gradients == "last_block":
+        block = nn.Sequential(*list(model.children())[-1:])  # TODO
+        # compute per-example gradients
+        # grad_outputs: weights for each example in the batch
+        grads = torch.autograd.grad(outputs=loss, inputs=block.parameters(), grad_outputs=eye, is_grads_batched=True)[0]
+        # grads = torch.autograd.grad(outputs=loss, inputs=block.parameters(), grad_outputs=eye)[0]  # error: Mismatch in shape: grad_output[0] has a shape of torch.Size([64, 64]) and output[0] has a shape of torch.Size([64]).
+        # grads = torch.autograd.grad(outputs=loss, inputs=block.parameters(), is_grads_batched=True)[0]  # error: grad can be implicitly created only for scalar outputs
+        # grads_0 = torch.autograd.grad(outputs=loss[0], inputs=block.parameters())[0]
+        # print("grads_0 : {}".format(grads_0))
+        # print("grads: {}".format(grads))
+        # print("shape of grads: {}".format(grads.shape))
+        # print("shape of grads_0: {}".format(grads_0.shape))
+        # grads = [torch.autograd.grad(l, [param for param in block.parameters()], retain_graph=True)[0].unsqueeze(0) for l in loss]
+        if flatten:
+            grads = grads.view(grads.shape[0], -1)
+    elif choose_gradients == "all":
+        grads = torch.autograd.grad(outputs=loss, inputs=model.parameters(), grad_outputs=eye, is_grads_batched=True)[0]
+        if flatten:
+            grads = grads.view(grads.shape[0], -1)
+    return grads, loss
 
 
 def get_feature(model, x, feat_type='top', flatten=True):
@@ -224,16 +282,27 @@ def get_feature(model, x, feat_type='top', flatten=True):
 
 def train(model, criterion, dataset,
           logger, train_csv_logger, val_csv_logger, test_csv_logger,
-          args, epoch_offset):
+          args, epoch_offset, print_grad_loss=False, print_feat=False,
+          uniform_loss=False):
     model = model.cuda()
 
     # process generalization adjustment stuff
     adjustments = [float(c) for c in args.generalization_adjustment.split(',')]
     assert len(adjustments) in (1, dataset['train_data'].n_groups)
+    # print(f'Length of Adjustments: {len(adjustments)}')
+    # print(dataset['train_data'].n_groups) # 4
+    # print(f'Adjustments: {adjustments}') # [0]
+    
     if len(adjustments)==1:
         adjustments = np.array(adjustments* dataset['train_data'].n_groups)
     else:
         adjustments = np.array(adjustments)
+
+    # # same with test process
+    # for batch_idx, batch in enumerate(dataset['train_loader']):
+    #     batch = tuple(t.cuda() for t in batch)
+    #     g = batch[2]
+    #     print(g)
 
     train_loss_computer = LossComputer(
         criterion,
@@ -283,10 +352,14 @@ def train(model, criterion, dataset,
             scheduler = None
 
     best_val_acc = 0
+    d_train = {}
+    d_val = {}
+    d_test = {}
+
     for epoch in range(epoch_offset, epoch_offset+args.n_epochs):
         logger.write('\nEpoch [%d]:\n' % epoch)
         logger.write(f'Training:\n')
-        run_epoch(
+        run_epoch(d_train,
             epoch, model, optimizer,
             dataset['train_loader'],
             train_loss_computer,
@@ -294,7 +367,14 @@ def train(model, criterion, dataset,
             is_training=True,
             show_progress=args.show_progress,
             log_every=args.log_every,
-            scheduler=scheduler)
+            scheduler=scheduler,
+            criterion=criterion,
+            print_grad_loss=print_grad_loss,
+            print_feat=print_feat,
+            uniform_loss=uniform_loss)
+        
+        # set_seed(args.seed)
+        # test(model, criterion, dataset, logger, args, show_progress=args.show_progress, split="train", uniform_loss=uniform_loss)
 
         logger.write(f'\nValidation:\n')
         val_loss_computer = LossComputer(
@@ -303,12 +383,19 @@ def train(model, criterion, dataset,
             dataset=dataset['val_data'],
             step_size=args.robust_step_size,
             alpha=args.alpha)
-        run_epoch(
+        run_epoch(d_val,
             epoch, model, optimizer,
             dataset['val_loader'],
             val_loss_computer,
             logger, val_csv_logger, args,
-            is_training=False)
+            is_training=False,
+            print_grad_loss=print_grad_loss,
+            print_feat=print_feat,
+            criterion=criterion,
+            uniform_loss=uniform_loss)
+        
+        # set_seed(args.seed)
+        # test(model, criterion, dataset, logger, args, show_progress=args.show_progress, split="val", uniform_loss=uniform_loss)
 
         # Test set; don't print to avoid peeking
         if dataset['test_data'] is not None:
@@ -318,12 +405,19 @@ def train(model, criterion, dataset,
                 dataset=dataset['test_data'],
                 step_size=args.robust_step_size,
                 alpha=args.alpha)
-            run_epoch(
+            run_epoch(d_test,
                 epoch, model, optimizer,
                 dataset['test_loader'],
                 test_loss_computer,
                 None, test_csv_logger, args,
-                is_training=False)
+                is_training=False,
+                print_grad_loss=print_grad_loss,
+                print_feat=print_feat,
+                criterion=criterion,
+                uniform_loss=uniform_loss)
+            
+            # set_seed(args.seed)
+            # test(model, criterion, dataset, logger, args, show_progress=args.show_progress, split="test", uniform_loss=uniform_loss)
 
         # Inspect learning rates
         if (epoch+1) % 1 == 0:
@@ -365,3 +459,13 @@ def train(model, criterion, dataset,
                     f'  {train_loss_computer.get_group_name(group_idx)}:\t'
                     f'adj = {train_loss_computer.adj[group_idx]:.3f}\n')
         logger.write('\n')
+    
+        if (epoch+1) % 10 == 0:
+            df_train = pd.DataFrame(d_train)
+            df_train.to_csv(os.path.join(args.log_dir, 'train_metrics.csv'), index=True)
+
+            df_val = pd.DataFrame(d_val)
+            df_val.to_csv(os.path.join(args.log_dir, 'val_metrics.csv'), index=True)
+
+            df_test = pd.DataFrame(d_test)
+            df_test.to_csv(os.path.join(args.log_dir, 'test_metrics.csv'), index=True)

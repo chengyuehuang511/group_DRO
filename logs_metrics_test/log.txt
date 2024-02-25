@@ -1,0 +1,123 @@
+Dataset: CUB
+Shift type: confounder
+Target name: waterbird_complete95
+Confounder names: ['forest2water2']
+Resume: False
+Inference: False
+Minority fraction: None
+Imbalance ratio: None
+Fraction: 1.0
+Root dir: ./
+Reweight groups: False
+Augment data: False
+Val fraction: 0.1
+Robust: False
+Alpha: 0.2
+Generalization adjustment: 0.0
+Automatic adjustment: False
+Robust step size: 0.01
+Use normalized loss: False
+Btl: False
+Hinge: False
+Model: resnet50
+Train from scratch: False
+N epochs: 3
+Batch size: 128
+Lr: 0.001
+Scheduler: False
+Weight decay: 0.0001
+Gamma: 0.1
+Minimum variational weight: 0
+Seed: 0
+Show progress: True
+Log dir: ./logs_metrics_test
+Checkpoint dir: ./logs_a40
+Log every: 50
+Save step: 1000
+Save best: True
+Save last: True
+
+Training Data...
+    waterbird_complete95 = 0, forest2water2 = 0: n = 3498
+    waterbird_complete95 = 0, forest2water2 = 1: n = 184
+    waterbird_complete95 = 1, forest2water2 = 0: n = 56
+    waterbird_complete95 = 1, forest2water2 = 1: n = 1057
+Validation Data...
+    waterbird_complete95 = 0, forest2water2 = 0: n = 467
+    waterbird_complete95 = 0, forest2water2 = 1: n = 466
+    waterbird_complete95 = 1, forest2water2 = 0: n = 133
+    waterbird_complete95 = 1, forest2water2 = 1: n = 133
+Test Data...
+    waterbird_complete95 = 0, forest2water2 = 0: n = 2255
+    waterbird_complete95 = 0, forest2water2 = 1: n = 2255
+    waterbird_complete95 = 1, forest2water2 = 0: n = 642
+    waterbird_complete95 = 1, forest2water2 = 1: n = 642
+
+Epoch [0]:
+Training:
+Average incurred loss: 0.323  
+Average sample loss: 0.321  
+Average acc: 0.870  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.165  exp loss = 0.099  adjusted loss = 0.099  adv prob = 0.250000   acc = 0.990
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.521  exp loss = 0.614  adjusted loss = 0.614  adv prob = 0.250000   acc = 0.701
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 1.503  exp loss = 1.545  adjusted loss = 1.545  adv prob = 0.250000   acc = 0.107
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.749  exp loss = 0.457  adjusted loss = 0.457  adv prob = 0.250000   acc = 0.545
+
+Validation:
+Average incurred loss: 0.586  
+Average sample loss: 0.573  
+Average acc: 0.695  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.070  exp loss = 0.067  adjusted loss = 0.067  adv prob = 0.250000   acc = 0.985
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.935  exp loss = 0.945  adjusted loss = 0.945  adv prob = 0.250000   acc = 0.457
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.536  exp loss = 1.688  adjusted loss = 1.688  adv prob = 0.250000   acc = 0.248
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.222  exp loss = 0.285  adjusted loss = 0.285  adv prob = 0.250000   acc = 0.955
+Current lr: 0.001000
+Current validation accuracy: 0.6947456002235413
+Best model saved at epoch 0
+
+
+Epoch [1]:
+Training:
+Average incurred loss: 0.124  
+Average sample loss: 0.123  
+Average acc: 0.955  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.041  exp loss = 0.038  adjusted loss = 0.038  adv prob = 0.250000   acc = 0.997
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.795  exp loss = 0.749  adjusted loss = 0.749  adv prob = 0.250000   acc = 0.549
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 1.522  exp loss = 1.263  adjusted loss = 1.263  adv prob = 0.250000   acc = 0.304
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.208  exp loss = 0.177  adjusted loss = 0.177  adv prob = 0.250000   acc = 0.923
+
+Validation:
+Average incurred loss: 0.468  
+Average sample loss: 0.453  
+Average acc: 0.783  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.035  exp loss = 0.030  adjusted loss = 0.030  adv prob = 0.250000   acc = 0.994
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.658  exp loss = 0.679  adjusted loss = 0.679  adv prob = 0.250000   acc = 0.652
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.600  exp loss = 1.817  adjusted loss = 1.817  adv prob = 0.250000   acc = 0.323
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.188  exp loss = 0.253  adjusted loss = 0.253  adv prob = 0.250000   acc = 0.962
+Current lr: 0.001000
+Current validation accuracy: 0.7831526398658752
+Best model saved at epoch 1
+
+
+Epoch [2]:
+Training:
+Average incurred loss: 0.086  
+Average sample loss: 0.087  
+Average acc: 0.971  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.026  exp loss = 0.031  adjusted loss = 0.031  adv prob = 0.250000   acc = 0.998
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.472  exp loss = 0.618  adjusted loss = 0.618  adv prob = 0.250000   acc = 0.772
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 1.077  exp loss = 1.139  adjusted loss = 1.139  adv prob = 0.250000   acc = 0.589
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.163  exp loss = 0.144  adjusted loss = 0.144  adv prob = 0.250000   acc = 0.938
+
+Validation:
+Average incurred loss: 0.468  
+Average sample loss: 0.454  
+Average acc: 0.793  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.038  exp loss = 0.031  adjusted loss = 0.031  adv prob = 0.250000   acc = 0.991
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.757  exp loss = 0.793  adjusted loss = 0.793  adv prob = 0.250000   acc = 0.631
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.305  exp loss = 1.504  adjusted loss = 1.504  adv prob = 0.250000   acc = 0.489
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.127  exp loss = 0.163  adjusted loss = 0.163  adv prob = 0.250000   acc = 0.970
+Current lr: 0.001000
+Current validation accuracy: 0.7931610345840454
+Best model saved at epoch 2
+

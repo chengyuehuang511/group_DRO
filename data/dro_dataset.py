@@ -46,9 +46,11 @@ class DRODataset(Dataset):
             shuffle = False
             sampler = None
         elif not reweight_groups: # Training but not reweighting
+            print("Training without reweighting")
             shuffle = True
             sampler = None
         else: # Training and reweighting
+            print("Reweighting groups")
             # When the --robust flag is not set, reweighting changes the loss function
             # from the normal ERM (average loss over each training example)
             # to a reweighted ERM (weighted average where each (y,c) group has equal weight) .

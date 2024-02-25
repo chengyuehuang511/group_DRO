@@ -42,6 +42,10 @@ def main():
     parser.add_argument('--use_normalized_loss', default=False, action='store_true')
     parser.add_argument('--btl', default=False, action='store_true')
     parser.add_argument('--hinge', default=False, action='store_true')
+    
+    parser.add_argument('--print_grad_loss', default=False, action='store_true')
+    parser.add_argument('--print_feat', default=False, action='store_true')
+    parser.add_argument('--uniform_loss', default=False, action='store_true')
 
     # Model
     parser.add_argument(
@@ -103,7 +107,7 @@ def main():
     elif args.shift_type == 'label_shift_step':
         train_data, val_data = prepare_data(args, train=True)
 
-    loader_kwargs = {'batch_size':args.batch_size, 'num_workers':4, 'pin_memory':True}
+    loader_kwargs = {'batch_size':args.batch_size, 'num_workers':0, 'pin_memory':True}
     train_loader = train_data.get_loader(train=True, reweight_groups=args.reweight_groups, **loader_kwargs)
     val_loader = val_data.get_loader(train=False, reweight_groups=None, **loader_kwargs)
     if test_data is not None:
@@ -117,6 +121,14 @@ def main():
     data['val_data'] = val_data
     data['test_data'] = test_data
     n_classes = train_data.n_classes
+
+    # # same with test process
+    # for batch_idx, batch in enumerate(train_loader):
+    #     batch = tuple(t.cuda() for t in batch)
+    #     x = batch[0]
+    #     y = batch[1]
+    #     g = batch[2]
+    #     print(g)
 
     log_data(data, logger)
 
@@ -134,9 +146,27 @@ def main():
         model = nn.Linear(d, n_classes)
         model.has_aux_logits = False
     elif args.model == 'resnet50':
+        # changeeeeeeeee
+        # for batch_idx, batch in enumerate(train_loader):
+        #     batch = tuple(t.cuda() for t in batch)
+        #     x = batch[0]
+        #     y = batch[1]
+        #     g = batch[2]
+        #     print(g)
+        
         model = torchvision.models.resnet50(pretrained=pretrained)
         d = model.fc.in_features
         model.fc = nn.Linear(d, n_classes)
+
+        set_seed(args.seed)
+        # changeeeeeeeee
+        # for batch_idx, batch in enumerate(train_loader):
+        #     batch = tuple(t.cuda() for t in batch)
+        #     x = batch[0]
+        #     y = batch[1]
+        #     g = batch[2]
+        #     print(g)
+
     elif args.model == 'resnet34':
         model = torchvision.models.resnet34(pretrained=pretrained)
         d = model.fc.in_features
@@ -178,14 +208,16 @@ def main():
             return torch_loss(yhat[:, 1], yhat[:, 0], y)
         criterion = hinge_loss
     else:
-        criterion = torch.nn.CrossEntropyLoss(reduction='none')
+        criterion = torch.nn.CrossEntropyLoss(reduction='none')  # for each sample
+    
+    # print("criterion: ", criterion)
 
     if resume:
         df = pd.read_csv(os.path.join(args.log_dir, 'test.csv'))
         epoch_offset = df.loc[len(df)-1,'epoch']+1
         logger.write(f'starting from epoch {epoch_offset}')
     elif args.inference:
-        test(model, criterion, data, logger, args, show_progress=args.show_progress, split="test", uniform_loss=True)
+        test(model, criterion, data, logger, args, show_progress=args.show_progress, split="test", uniform_loss=False)
         return
     else:
         epoch_offset=0
@@ -193,7 +225,8 @@ def main():
     val_csv_logger =  CSVBatchLogger(os.path.join(args.log_dir, 'val.csv'), train_data.n_groups, mode=mode)
     test_csv_logger =  CSVBatchLogger(os.path.join(args.log_dir, 'test.csv'), train_data.n_groups, mode=mode)
 
-    train(model, criterion, data, logger, train_csv_logger, val_csv_logger, test_csv_logger, args, epoch_offset=epoch_offset)
+    train(model, criterion, data, logger, train_csv_logger, val_csv_logger, test_csv_logger, args, epoch_offset=epoch_offset, 
+            print_feat=args.print_feat, print_grad_loss=args.print_grad_loss, uniform_loss=args.uniform_loss)
 
     train_csv_logger.close()
     val_csv_logger.close()

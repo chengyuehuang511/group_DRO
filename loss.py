@@ -38,6 +38,7 @@ class LossComputer:
     def loss(self, yhat, y, group_idx=None, is_training=False):
         # compute per-sample and per-group losses
         per_sample_losses = self.criterion(yhat, y)
+        # print("per_sample_losses: ", per_sample_losses)
         group_loss, group_count = self.compute_group_avg(per_sample_losses, group_idx)
         group_acc, group_count = self.compute_group_avg((torch.argmax(yhat,1)==y).float(), group_idx)
 
@@ -45,6 +46,7 @@ class LossComputer:
         self.update_exp_avg_loss(group_loss, group_count)
 
         # compute overall loss
+        # print(self.is_robust, self.btl)
         if self.is_robust and not self.btl:
             actual_loss, weights = self.compute_robust_loss(group_loss, group_count)
         elif self.is_robust and self.btl:
@@ -53,8 +55,11 @@ class LossComputer:
             actual_loss = per_sample_losses.mean()
             weights = None
 
+        # print(actual_loss)
         # update stats
-        self.update_stats(actual_loss, group_loss, group_acc, group_count, weights)
+        self.update_stats(actual_loss, group_loss, group_acc, group_count, weights)  # update batch-wise stats
+
+        # print(actual_loss)
 
         return actual_loss
 
