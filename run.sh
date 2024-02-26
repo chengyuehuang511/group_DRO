@@ -16,9 +16,9 @@ cd /nethome/chuang475/flash/projects/group_DRO
                     --save_best \
                     --save_last \
                     --show_progress \
-                    --log_dir ./logs_metrics_fix_epoch300_uniform \
+                    --log_dir ./logs_fix \
                     --print_grad_loss \
                     --uniform_loss \
-                    # --print_feat \
+                    --print_feat \
                     # --checkpoint_dir ./logs_metrics_tmp_2 \
                     # --inference

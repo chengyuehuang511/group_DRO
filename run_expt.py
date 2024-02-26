@@ -122,14 +122,6 @@ def main():
     data['test_data'] = test_data
     n_classes = train_data.n_classes
 
-    # # same with test process
-    # for batch_idx, batch in enumerate(train_loader):
-    #     batch = tuple(t.cuda() for t in batch)
-    #     x = batch[0]
-    #     y = batch[1]
-    #     g = batch[2]
-    #     print(g)
-
     log_data(data, logger)
 
     ## Initialize model
@@ -146,27 +138,9 @@ def main():
         model = nn.Linear(d, n_classes)
         model.has_aux_logits = False
     elif args.model == 'resnet50':
-        # changeeeeeeeee
-        # for batch_idx, batch in enumerate(train_loader):
-        #     batch = tuple(t.cuda() for t in batch)
-        #     x = batch[0]
-        #     y = batch[1]
-        #     g = batch[2]
-        #     print(g)
-        
         model = torchvision.models.resnet50(pretrained=pretrained)
         d = model.fc.in_features
         model.fc = nn.Linear(d, n_classes)
-
-        set_seed(args.seed)
-        # changeeeeeeeee
-        # for batch_idx, batch in enumerate(train_loader):
-        #     batch = tuple(t.cuda() for t in batch)
-        #     x = batch[0]
-        #     y = batch[1]
-        #     g = batch[2]
-        #     print(g)
-
     elif args.model == 'resnet34':
         model = torchvision.models.resnet34(pretrained=pretrained)
         d = model.fc.in_features
@@ -209,8 +183,6 @@ def main():
         criterion = hinge_loss
     else:
         criterion = torch.nn.CrossEntropyLoss(reduction='none')  # for each sample
-    
-    # print("criterion: ", criterion)
 
     if resume:
         df = pd.read_csv(os.path.join(args.log_dir, 'test.csv'))

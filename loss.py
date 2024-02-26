@@ -35,31 +35,37 @@ class LossComputer:
 
         self.reset_stats()
 
-    def loss(self, yhat, y, group_idx=None, is_training=False):
+    def loss(self, yhat, y, group_idx=None, is_training=False, grad_norm=None, grad_norm_uniform=None, loss_each_uniform=None, feat_norm=None):
         # compute per-sample and per-group losses
         per_sample_losses = self.criterion(yhat, y)
-        # print("per_sample_losses: ", per_sample_losses)
         group_loss, group_count = self.compute_group_avg(per_sample_losses, group_idx)
         group_acc, group_count = self.compute_group_avg((torch.argmax(yhat,1)==y).float(), group_idx)
+
+        group_grad_norm, group_grad_norm_uniform, group_loss_each_uniform, group_feat_norm = None, None, None, None
+        if grad_norm is not None:
+            group_grad_norm, group_count = self.compute_group_avg(grad_norm, group_idx)
+        if grad_norm_uniform is not None:
+            group_grad_norm_uniform, group_count = self.compute_group_avg(grad_norm_uniform, group_idx)
+        if loss_each_uniform is not None:
+            group_loss_each_uniform, group_count = self.compute_group_avg(loss_each_uniform, group_idx)
+        if feat_norm is not None:
+            group_feat_norm, group_count = self.compute_group_avg(feat_norm, group_idx)
 
         # update historical losses
         self.update_exp_avg_loss(group_loss, group_count)
 
         # compute overall loss
-        # print(self.is_robust, self.btl)
         if self.is_robust and not self.btl:
             actual_loss, weights = self.compute_robust_loss(group_loss, group_count)
         elif self.is_robust and self.btl:
-             actual_loss, weights = self.compute_robust_loss_btl(group_loss, group_count)
+            actual_loss, weights = self.compute_robust_loss_btl(group_loss, group_count)
         else:
             actual_loss = per_sample_losses.mean()
             weights = None
 
-        # print(actual_loss)
         # update stats
-        self.update_stats(actual_loss, group_loss, group_acc, group_count, weights)  # update batch-wise stats
-
-        # print(actual_loss)
+        self.update_stats(actual_loss, group_loss, group_acc, group_count, weights,
+                          group_grad_norm, group_grad_norm_uniform, group_loss_each_uniform, group_feat_norm)  # update batch-wise stats
 
         return actual_loss
 
@@ -115,14 +121,28 @@ class LossComputer:
         self.processed_data_counts = torch.zeros(self.n_groups).cuda()
         self.update_data_counts = torch.zeros(self.n_groups).cuda()
         self.update_batch_counts = torch.zeros(self.n_groups).cuda()
+        
         self.avg_group_loss = torch.zeros(self.n_groups).cuda()
         self.avg_group_acc = torch.zeros(self.n_groups).cuda()
+        
+        self.avg_group_grad_norm = torch.zeros(self.n_groups).cuda()
+        self.avg_group_grad_norm_uniform = torch.zeros(self.n_groups).cuda()
+        self.avg_group_loss_each_uniform = torch.zeros(self.n_groups).cuda()
+        self.avg_group_feat_norm = torch.zeros(self.n_groups).cuda()
+        
         self.avg_per_sample_loss = 0.
         self.avg_actual_loss = 0.
         self.avg_acc = 0.
+
+        self.avg_grad_norm = 0.
+        self.avg_grad_norm_uniform = 0.
+        self.avg_loss_each_uniform = 0.
+        self.avg_feat_norm = 0.
+
         self.batch_count = 0.
 
-    def update_stats(self, actual_loss, group_loss, group_acc, group_count, weights=None):
+    def update_stats(self, actual_loss, group_loss, group_acc, group_count, weights=None,
+                     group_grad_norm=None, group_grad_norm_uniform=None, group_loss_each_uniform=None, group_feat_norm=None):
         # avg group loss
         denom = self.processed_data_counts + group_count
         denom += (denom==0).float()
@@ -132,6 +152,16 @@ class LossComputer:
 
         # avg group acc
         self.avg_group_acc = prev_weight*self.avg_group_acc + curr_weight*group_acc
+
+        # avg group grad norm, grad norm uniform, loss each uniform, feat norm
+        if group_grad_norm is not None:
+            self.avg_group_grad_norm = prev_weight*self.avg_group_grad_norm + curr_weight*group_grad_norm
+        if group_grad_norm_uniform is not None:
+            self.avg_group_grad_norm_uniform = prev_weight*self.avg_group_grad_norm_uniform + curr_weight*group_grad_norm_uniform
+        if group_loss_each_uniform is not None:
+            self.avg_group_loss_each_uniform = prev_weight*self.avg_group_loss_each_uniform + curr_weight*group_loss_each_uniform
+        if group_feat_norm is not None:
+            self.avg_group_feat_norm = prev_weight*self.avg_group_feat_norm + curr_weight*group_feat_norm
 
         # batch-wise average actual loss
         denom = self.batch_count + 1
@@ -151,6 +181,14 @@ class LossComputer:
         group_frac = self.processed_data_counts/(self.processed_data_counts.sum())
         self.avg_per_sample_loss = group_frac @ self.avg_group_loss
         self.avg_acc = group_frac @ self.avg_group_acc
+        if group_grad_norm is not None:
+            self.avg_grad_norm = group_frac @ self.avg_group_grad_norm
+        if group_grad_norm_uniform is not None:
+            self.avg_grad_norm_uniform = group_frac @ self.avg_group_grad_norm_uniform
+        if group_loss_each_uniform is not None:
+            self.avg_loss_each_uniform = group_frac @ self.avg_group_loss_each_uniform
+        if group_feat_norm is not None:
+            self.avg_feat_norm = group_frac @ self.avg_group_feat_norm
 
     def get_model_stats(self, model, args, stats_dict):
         model_norm_sq = 0.
@@ -170,9 +208,19 @@ class LossComputer:
             stats_dict[f'update_data_count_group:{idx}'] = self.update_data_counts[idx].item()
             stats_dict[f'update_batch_count_group:{idx}'] = self.update_batch_counts[idx].item()
 
+            stats_dict[f'avg_group_grad_norm:{idx}'] = self.avg_group_grad_norm[idx].item()
+            stats_dict[f'avg_group_grad_norm_uniform:{idx}'] = self.avg_group_grad_norm_uniform[idx].item()
+            stats_dict[f'avg_group_loss_each_uniform:{idx}'] = self.avg_group_loss_each_uniform[idx].item()
+            stats_dict[f'avg_group_feat_norm:{idx}'] = self.avg_group_feat_norm[idx].item()
+
         stats_dict['avg_actual_loss'] = self.avg_actual_loss.item()
         stats_dict['avg_per_sample_loss'] = self.avg_per_sample_loss.item()
         stats_dict['avg_acc'] = self.avg_acc.item()
+
+        stats_dict['avg_grad_norm'] = self.avg_grad_norm.item()
+        stats_dict['avg_grad_norm_uniform'] = self.avg_grad_norm_uniform.item()
+        stats_dict['avg_loss_each_uniform'] = self.avg_loss_each_uniform.item()
+        stats_dict['avg_feat_norm'] = self.avg_feat_norm.item()
 
         # Model stats
         if model is not None:
@@ -188,6 +236,12 @@ class LossComputer:
         logger.write(f'Average incurred loss: {self.avg_per_sample_loss.item():.3f}  \n')
         logger.write(f'Average sample loss: {self.avg_actual_loss.item():.3f}  \n')
         logger.write(f'Average acc: {self.avg_acc.item():.3f}  \n')
+        
+        logger.write(f'Average grad norm: {self.avg_grad_norm.item():.3f}  \n')
+        logger.write(f'Average grad norm uniform: {self.avg_grad_norm_uniform.item():.3f}  \n')
+        logger.write(f'Average loss each uniform: {self.avg_loss_each_uniform.item():.3f}  \n')
+        logger.write(f'Average feat norm: {self.avg_feat_norm.item():.3f}  \n')
+        
         for group_idx in range(self.n_groups):
             logger.write(
                 f'  {self.group_str(group_idx)}  '
@@ -196,5 +250,9 @@ class LossComputer:
                 f'exp loss = {self.exp_avg_loss[group_idx]:.3f}  '
                 f'adjusted loss = {self.exp_avg_loss[group_idx] + self.adj[group_idx]/torch.sqrt(self.group_counts)[group_idx]:.3f}  '
                 f'adv prob = {self.adv_probs[group_idx]:3f}   '
-                f'acc = {self.avg_group_acc[group_idx]:.3f}\n')
+                f'acc = {self.avg_group_acc[group_idx]:.3f}   '
+                f'grad norm = {self.avg_group_grad_norm[group_idx]:.3f}   '
+                f'grad norm uniform = {self.avg_group_grad_norm_uniform[group_idx]:.3f}   '
+                f'loss each uniform = {self.avg_group_loss_each_uniform[group_idx]:.3f}   '
+                f'feat norm = {self.avg_group_feat_norm[group_idx]:.3f}  \n')
         logger.flush()
