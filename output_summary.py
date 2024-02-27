@@ -37,25 +37,28 @@ def summary(output):
                     print(f"Compare {a} and {b}", compare(g, a, b))
 
 
-def summary_epoch_group(output, column_list, name_list, criterion='loss'):
+def summary_epoch_group(output, column_list, name_list, criterion='loss', split="train", axs=None):
     marker_styles = ['o', 's', '^', 'D', '*', 'p', 'h', '+', 'x', 'd']
-    output = pd.read_csv(output, index_col=0).head(60)
+    output = pd.read_csv(output, index_col=0).head(100)
 
-    plt.figure(figsize=(10, 6))
+    # plt.figure(figsize=(9, 6))
     for i, (column, name) in enumerate(zip(column_list, name_list)):
-        plt.plot(output[column], label=name, marker=marker_styles[i], markersize=3)
+        axs.plot(output[column], label=name, marker=marker_styles[i], markersize=2)
 
     # Adding title and labels
-    plt.title(f'Average {criterion} per group')
-    plt.xlabel('Epoch')
-    plt.ylabel(f'Average {criterion}')
+    if criterion == "loss_each_uniform":
+        criterion = "loss_uniform"
+
+    axs.set_title(f'{criterion}', fontsize=14)
+    # axs.xlabel('Epoch')
+    # axs.ylabel(f'Average {criterion}')
 
     # Show legend
-    plt.legend()
+    # plt.legend()
 
-    # Save the figure
-    plt.savefig(f'plot/avg_{criterion}_groups.png', format='png', dpi=300)
-    plt.close()
+    # # Save the figure
+    # plt.savefig(f'plot/{split}/avg_{criterion}_groups.png', format='png', dpi=300)
+    # plt.close()
 
 
 if __name__ == "__main__":
@@ -156,7 +159,6 @@ if __name__ == "__main__":
     # print(d)
 
     """summary wrt epoch per group"""
-    name_list = ['Landbird on Land (3498)', 'Landbird on Water (184)', 'Waterbird on Land (56)', 'Waterbid on Water (1057)']
     loss_column_list = ['avg_loss_group:0', 'avg_loss_group:1', 'avg_loss_group:2', 'avg_loss_group:3']
     acc_column_list = ['avg_acc_group:0', 'avg_acc_group:1', 'avg_acc_group:2', 'avg_acc_group:3']
     avg_group_grad_norm = ['avg_group_grad_norm:0', 'avg_group_grad_norm:1', 'avg_group_grad_norm:2', 'avg_group_grad_norm:3']
@@ -164,9 +166,33 @@ if __name__ == "__main__":
     avg_group_loss_each_uniform = ['avg_group_loss_each_uniform:0', 'avg_group_loss_each_uniform:1', 'avg_group_loss_each_uniform:2', 'avg_group_loss_each_uniform:3']
     avg_group_feat_norm = ['avg_group_feat_norm:0', 'avg_group_feat_norm:1', 'avg_group_feat_norm:2', 'avg_group_feat_norm:3']
 
-    summary_epoch_group("logs_fix/train.csv", loss_column_list, name_list, criterion='loss')
-    summary_epoch_group("logs_fix/train.csv", acc_column_list, name_list, criterion='accuracy')
-    summary_epoch_group("logs_fix/train.csv", avg_group_grad_norm, name_list, criterion='grad_norm')
-    summary_epoch_group("logs_fix/train.csv", avg_group_grad_norm_uniform, name_list, criterion='grad_norm_uniform')
-    summary_epoch_group("logs_fix/train.csv", avg_group_loss_each_uniform, name_list, criterion='loss_each_uniform')
-    summary_epoch_group("logs_fix/train.csv", avg_group_feat_norm, name_list, criterion='feat_norm')
+    for split in ["train", "val"]:
+        if split == "train":
+            name_list = ['Landbird on Land (3498)', 'Landbird on Water (184)', 'Waterbird on Land (56)', 'Waterbid on Water (1057)']
+        elif split == "val":
+            name_list = ['Landbird on Land (467)', 'Landbird on Water (466)', 'Waterbird on Land (133)', 'Waterbid on Water (133)']
+        
+        fig, axs = plt.subplots(3, 2, figsize=(10, 10))
+        
+        summary_epoch_group(f"logs_fix/{split}.csv", loss_column_list, name_list, criterion='loss', split=split, axs=axs[0, 0])
+        summary_epoch_group(f"logs_fix/{split}.csv", avg_group_grad_norm, name_list, criterion='grad_norm', split=split, axs=axs[0, 1])
+        summary_epoch_group(f"logs_fix/{split}.csv", acc_column_list, name_list, criterion='accuracy', split=split, axs=axs[1, 0])
+        summary_epoch_group(f"logs_fix/{split}.csv", avg_group_feat_norm, name_list, criterion='feat_norm', split=split, axs=axs[1, 1])
+        summary_epoch_group(f"logs_fix/{split}.csv", avg_group_loss_each_uniform, name_list, criterion='loss_each_uniform', split=split, axs=axs[2, 0])
+        summary_epoch_group(f"logs_fix/{split}.csv", avg_group_grad_norm_uniform, name_list, criterion='grad_norm_uniform', split=split, axs=axs[2, 1])
+
+        handles, labels = axs[0, 0].get_legend_handles_labels()
+        if split == "train":
+            axs[0, 1].legend(handles, labels, loc='upper right')
+        elif split == "val":
+            axs[2, 1].legend(handles, labels, loc='lower right')
+        fig.suptitle(f'Average criterion per group [{split}]', fontsize=16)
+        # set x-axis label for the whole plot
+        fig.supxlabel("Epoch", fontsize=14)
+        
+        fig.tight_layout()
+        fig.savefig(f'plot/{split}/avg_criterion_groups_{split}.png', format='png', dpi=300)
+        
+
+        
+          
