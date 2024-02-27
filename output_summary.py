@@ -54,7 +54,7 @@ def summary_epoch_group(output, column_list, name_list, criterion='loss'):
     plt.legend()
 
     # Save the figure
-    plt.savefig(f'avg_{criterion}_groups.png', format='png', dpi=300)
+    plt.savefig(f'plot/avg_{criterion}_groups.png', format='png', dpi=300)
     plt.close()
 
 
@@ -116,49 +116,57 @@ if __name__ == "__main__":
     #     print((g["labels"] == g["predictions"]).mean())
 
 
-    output = pd.read_csv("logs_metrics_fix_epoch300/train_metrics.csv", index_col=0)
-    output_order = pd.read_csv("logs_order/train_metrics.csv", index_col=0)
+    # output = pd.read_csv("logs_metrics_fix_epoch300/train_metrics.csv", index_col=0)
+    # output_order = pd.read_csv("logs_order/train_metrics.csv", index_col=0)
 
-    d = {}
-    for col, order_col in zip(["grad_norm", "loss", "predictions", "feat_norm"], 
-                              ["grad", "grad", "", "feat"]):
-        # print(f"========== {col} ==========")
-        for i in range(4):
-            d[col + f'_g{i}'] = []
+    # d = {}
+    # for col, order_col in zip(["grad_norm", "loss", "predictions", "feat_norm"], 
+    #                           ["grad", "grad", "", "feat"]):
+    #     # print(f"========== {col} ==========")
+    #     for i in range(4):
+    #         d[col + f'_g{i}'] = []
         
-        for epoch in range(50):
-            if order_col == "":
-                name = f'aux_labels_{epoch}'
-                label_name = f"labels_{epoch}"
-            else:
-                name = f'aux_labels_{order_col}_{epoch}'
-                label_name = f"labels_{order_col}_{epoch}"
+    #     for epoch in range(50):
+    #         if order_col == "":
+    #             name = f'aux_labels_{epoch}'
+    #             label_name = f"labels_{epoch}"
+    #         else:
+    #             name = f'aux_labels_{order_col}_{epoch}'
+    #             label_name = f"labels_{order_col}_{epoch}"
             
-            g1 = output[(output_order[name] == 0)]
-            g2 = output[(output_order[name] == 1)]  #
-            g3 = output[(output_order[name] == 2)]  #
-            g4 = output[(output_order[name] == 3)]
+    #         g1 = output[(output_order[name] == 0)]
+    #         g2 = output[(output_order[name] == 1)]  #
+    #         g3 = output[(output_order[name] == 2)]  #
+    #         g4 = output[(output_order[name] == 3)]
 
-            label1 = output_order[(output_order[name] == 0)][label_name]
-            label2 = output_order[(output_order[name] == 1)][label_name]
-            label3 = output_order[(output_order[name] == 2)][label_name]
-            label4 = output_order[(output_order[name] == 3)][label_name]
+    #         label1 = output_order[(output_order[name] == 0)][label_name]
+    #         label2 = output_order[(output_order[name] == 1)][label_name]
+    #         label3 = output_order[(output_order[name] == 2)][label_name]
+    #         label4 = output_order[(output_order[name] == 3)][label_name]
 
-            for i, (g, label) in enumerate(zip([g1, g2, g3, g4], [label1, label2, label3, label4])):
-                # print(f"=====Group {i} {(len(g))}=====")
-                # print(g[col].mean())
-                if col == "predictions":
-                    d[col + f'_g{i}'].append((label == g[col + f'_{epoch}']).mean())
-                else:
-                    d[col + f'_g{i}'].append(g[col + f'_{epoch}'].mean())
+    #         for i, (g, label) in enumerate(zip([g1, g2, g3, g4], [label1, label2, label3, label4])):
+    #             # print(f"=====Group {i} {(len(g))}=====")
+    #             # print(g[col].mean())
+    #             if col == "predictions":
+    #                 d[col + f'_g{i}'].append((label == g[col + f'_{epoch}']).mean())
+    #             else:
+    #                 d[col + f'_g{i}'].append(g[col + f'_{epoch}'].mean())
         
-        plot_category(d, col, f'{col}_plot.png')
+    #     plot_category(d, col, f'{col}_plot.png')
     # print(d)
 
     """summary wrt epoch per group"""
-    # name_list = ['Landbird on Land (3498)', 'Landbird on Water (184)', 'Waterbird on Land (56)', 'Waterbid on Water (1057)']
-    # loss_column_list = ['avg_loss_group:0', 'avg_loss_group:1', 'avg_loss_group:2', 'avg_loss_group:3']
-    # acc_column_list = ['avg_acc_group:0', 'avg_acc_group:1', 'avg_acc_group:2', 'avg_acc_group:3']
+    name_list = ['Landbird on Land (3498)', 'Landbird on Water (184)', 'Waterbird on Land (56)', 'Waterbid on Water (1057)']
+    loss_column_list = ['avg_loss_group:0', 'avg_loss_group:1', 'avg_loss_group:2', 'avg_loss_group:3']
+    acc_column_list = ['avg_acc_group:0', 'avg_acc_group:1', 'avg_acc_group:2', 'avg_acc_group:3']
+    avg_group_grad_norm = ['avg_group_grad_norm:0', 'avg_group_grad_norm:1', 'avg_group_grad_norm:2', 'avg_group_grad_norm:3']
+    avg_group_grad_norm_uniform = ['avg_group_grad_norm_uniform:0', 'avg_group_grad_norm_uniform:1', 'avg_group_grad_norm_uniform:2', 'avg_group_grad_norm_uniform:3']
+    avg_group_loss_each_uniform = ['avg_group_loss_each_uniform:0', 'avg_group_loss_each_uniform:1', 'avg_group_loss_each_uniform:2', 'avg_group_loss_each_uniform:3']
+    avg_group_feat_norm = ['avg_group_feat_norm:0', 'avg_group_feat_norm:1', 'avg_group_feat_norm:2', 'avg_group_feat_norm:3']
 
-    # summary_epoch_group("logs_metrics_fix_epoch300/train.csv", loss_column_list, name_list, criterion='loss')
-    # summary_epoch_group("logs_metrics_fix_epoch300/train.csv", acc_column_list, name_list, criterion='accuracy')
+    summary_epoch_group("logs_fix/train.csv", loss_column_list, name_list, criterion='loss')
+    summary_epoch_group("logs_fix/train.csv", acc_column_list, name_list, criterion='accuracy')
+    summary_epoch_group("logs_fix/train.csv", avg_group_grad_norm, name_list, criterion='grad_norm')
+    summary_epoch_group("logs_fix/train.csv", avg_group_grad_norm_uniform, name_list, criterion='grad_norm_uniform')
+    summary_epoch_group("logs_fix/train.csv", avg_group_loss_each_uniform, name_list, criterion='loss_each_uniform')
+    summary_epoch_group("logs_fix/train.csv", avg_group_feat_norm, name_list, criterion='feat_norm')
