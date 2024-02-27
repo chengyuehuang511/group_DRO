@@ -46,11 +46,22 @@ class CSVBatchLogger:
             columns.append(f'processed_data_count_group:{idx}')
             columns.append(f'update_data_count_group:{idx}')
             columns.append(f'update_batch_count_group:{idx}')
+
+            columns.append(f'avg_group_grad_norm:{idx}')
+            columns.append(f'avg_group_grad_norm_uniform:{idx}')
+            columns.append(f'avg_group_loss_each_uniform:{idx}')
+            columns.append(f'avg_group_feat_norm:{idx}')
+            
         columns.append('avg_actual_loss')
         columns.append('avg_per_sample_loss')
         columns.append('avg_acc')
         columns.append('model_norm_sq')
         columns.append('reg_loss')
+
+        columns.append('avg_grad_norm')
+        columns.append('avg_grad_norm_uniform')
+        columns.append('avg_loss_each_uniform')
+        columns.append('avg_feat_norm')
 
         self.path = csv_path
         self.file = open(csv_path, mode)

@@ -61,21 +61,30 @@ def run_epoch(epoch, model, optimizer, loader, loss_computer, logger, csv_logger
             
             grad_norm, grad_norm_uniform, loss_each, loss_each_uniform, feat_norm = None, None, None, None, None
             
+            # track memory usage
+            # print("Memory allocated before print_grad_loss: {}".format(torch.cuda.memory_allocated()))
             if print_grad_loss:
-                grad, loss_each = get_grad_loss(model, x, y, criterion, choose_gradients=choose_gradients, flatten=flatten, uniform_loss=False)
+                with torch.set_grad_enabled(True):
+                    grad, loss_each = get_grad_loss(model, x, y, criterion, choose_gradients=choose_gradients, flatten=flatten, uniform_loss=False)
                 grad_norm = torch.norm(grad, dim=[1,2])  # [128, 2, 2048], [128, 64, 3, 7, 7]
             
+            # print("Memory allocated before uniform_loss: {}".format(torch.cuda.memory_allocated()))
             if uniform_loss:
-                grad_uniform, loss_each_uniform = get_grad_loss(model, x, y, criterion, choose_gradients=choose_gradients, flatten=flatten, uniform_loss=True)
+                with torch.set_grad_enabled(True):
+                    grad_uniform, loss_each_uniform = get_grad_loss(model, x, y, criterion, choose_gradients=choose_gradients, flatten=flatten, uniform_loss=True)
                 grad_norm_uniform = torch.norm(grad_uniform, dim=[1,2])  # [128, 2, 2048], [128, 64, 3, 7, 7]
             
+            # print("Memory allocated before print_feat: {}".format(torch.cuda.memory_allocated()))
             if print_feat:
                 feat = get_feature(model, x, feat_type=feat_type, flatten=flatten)
                 feat_norm = torch.norm(F.relu(feat), dim=[2,3]).mean(1)  # [128, 2048, 7, 7]
 
+            # print("Memory allocated before loss_main: {}".format(torch.cuda.memory_allocated()))
             # 1
             loss_main = loss_computer.loss(outputs, y, g, is_training, grad_norm, grad_norm_uniform, loss_each_uniform, feat_norm)
             assert loss_each.mean() == loss_main
+
+            # print("Memory allocated before backward: {}".format(torch.cuda.memory_allocated()))
 
             if is_training:
                 if args.model == 'bert':
@@ -172,20 +181,20 @@ def get_grad_loss(model, test_data, targets, loss_function, choose_gradients="la
         grads = torch.autograd.grad(outputs=loss, inputs=model.parameters(), grad_outputs=eye, is_grads_batched=True)[0]
         if flatten:
             grads = grads.view(grads.shape[0], -1)
-    return grads, loss
+    return grads.detach(), loss.detach()
 
 
 def get_feature(model, x, feat_type='top', flatten=True):
     if feat_type == 'x':
         if flatten == False:
-            return x
-        return x.view(x.size(0), -1)
+            return x.detach()
+        return x.view(x.size(0), -1).detach()
     elif feat_type == 'top':
         feature_layers = nn.Sequential(*list(model.children())[:-1])  # TODO
         feat = feature_layers(x)
         if flatten == False:
-            return feat
-        return feat.view(feat.size(0), -1)
+            return feat.detach()
+        return feat.view(feat.size(0), -1).detach()
     else:
         sys.exit(1)
 
