@@ -7117,3 +7117,1956 @@ Average feat norm: 0.449
   waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.946  exp loss = 1.032  adjusted loss = 1.032  adv prob = 0.250000   acc = 0.790   grad norm = 8.668   grad norm uniform = 33.186   loss each uniform = 5.933   feat norm = 0.478  
   waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.136  exp loss = 2.286  adjusted loss = 2.286  adv prob = 0.250000   acc = 0.609   grad norm = 14.307   grad norm uniform = 29.895   loss each uniform = 5.271   feat norm = 0.424  
   waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.208  exp loss = 0.208  adjusted loss = 0.208  adv prob = 0.250000   acc = 0.955   grad norm = 1.768   grad norm uniform = 38.273   loss each uniform = 11.133   feat norm = 0.453  
+Current lr: 0.001000
+Current validation accuracy: 0.8690575361251831
+
+
+Epoch [235]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.004  
+Average grad norm uniform: 36.090  
+Average loss each uniform: 11.999  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.827   loss each uniform = 12.128   feat norm = 0.430  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.017   grad norm uniform = 41.687   loss each uniform = 9.557   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.019   grad norm uniform = 36.945   loss each uniform = 8.760   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 39.249   loss each uniform = 12.169   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.696  
+Average sample loss: 0.677  
+Average acc: 0.854  
+Average grad norm: 5.826  
+Average grad norm uniform: 33.746  
+Average loss each uniform: 8.571  
+Average feat norm: 0.450  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.015  exp loss = 0.009  adjusted loss = 0.009  adv prob = 0.250000   acc = 0.994   grad norm = 0.312   grad norm uniform = 34.200   loss each uniform = 11.474   feat norm = 0.426  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.172  exp loss = 1.244  adjusted loss = 1.244  adv prob = 0.250000   acc = 0.745   grad norm = 10.533   grad norm uniform = 32.744   loss each uniform = 5.636   feat norm = 0.480  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.935  exp loss = 2.048  adjusted loss = 2.048  adv prob = 0.250000   acc = 0.632   grad norm = 13.080   grad norm uniform = 30.270   loss each uniform = 5.411   feat norm = 0.425  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.184  exp loss = 0.192  adjusted loss = 0.192  adv prob = 0.250000   acc = 0.970   grad norm = 1.438   grad norm uniform = 39.138   loss each uniform = 11.820   feat norm = 0.457  
+Current lr: 0.001000
+Current validation accuracy: 0.854045033454895
+
+
+Epoch [236]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.093  
+Average loss each uniform: 12.017  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.827   loss each uniform = 12.140   feat norm = 0.430  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.010   grad norm uniform = 41.740   loss each uniform = 9.615   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.025   grad norm uniform = 36.828   loss each uniform = 8.558   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 39.262   loss each uniform = 12.213   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.628  
+Average sample loss: 0.607  
+Average acc: 0.869  
+Average grad norm: 5.222  
+Average grad norm uniform: 33.778  
+Average loss each uniform: 8.703  
+Average feat norm: 0.448  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.007  exp loss = 0.004  adjusted loss = 0.004  adv prob = 0.250000   acc = 0.998   grad norm = 0.186   grad norm uniform = 34.055   loss each uniform = 11.723   feat norm = 0.422  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.930  exp loss = 1.002  adjusted loss = 1.002  adv prob = 0.250000   acc = 0.792   grad norm = 8.634   grad norm uniform = 33.197   loss each uniform = 5.936   feat norm = 0.478  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.165  exp loss = 2.319  adjusted loss = 2.319  adv prob = 0.250000   acc = 0.602   grad norm = 14.399   grad norm uniform = 30.001   loss each uniform = 5.277   feat norm = 0.424  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.211  exp loss = 0.213  adjusted loss = 0.213  adv prob = 0.250000   acc = 0.955   grad norm = 1.773   grad norm uniform = 38.621   loss each uniform = 11.217   feat norm = 0.457  
+Current lr: 0.001000
+Current validation accuracy: 0.8690575957298279
+
+
+Epoch [237]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.082  
+Average loss each uniform: 12.002  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.814   loss each uniform = 12.122   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.009   grad norm uniform = 41.731   loss each uniform = 9.808   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.021   grad norm uniform = 36.950   loss each uniform = 8.631   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 39.251   loss each uniform = 12.166   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.790  
+Average sample loss: 0.772  
+Average acc: 0.829  
+Average grad norm: 6.619  
+Average grad norm uniform: 33.828  
+Average loss each uniform: 8.353  
+Average feat norm: 0.452  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.028  exp loss = 0.017  adjusted loss = 0.017  adv prob = 0.250000   acc = 0.987   grad norm = 0.488   grad norm uniform = 34.066   loss each uniform = 10.855   feat norm = 0.425  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.497  exp loss = 1.606  adjusted loss = 1.606  adv prob = 0.250000   acc = 0.676   grad norm = 12.926   grad norm uniform = 32.455   loss each uniform = 5.330   feat norm = 0.482  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.628  exp loss = 1.765  adjusted loss = 1.765  adv prob = 0.250000   acc = 0.669   grad norm = 11.525   grad norm uniform = 31.403   loss each uniform = 5.749   feat norm = 0.429  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.147  exp loss = 0.158  adjusted loss = 0.158  adv prob = 0.250000   acc = 0.970   grad norm = 1.145   grad norm uniform = 40.228   loss each uniform = 12.762   feat norm = 0.464  
+Current lr: 0.001000
+Current validation accuracy: 0.8290241956710815
+
+
+Epoch [238]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.004  
+Average grad norm uniform: 36.084  
+Average loss each uniform: 12.030  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 34.815   loss each uniform = 12.154   feat norm = 0.430  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.018   grad norm uniform = 41.757   loss each uniform = 9.612   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.018   grad norm uniform = 37.069   loss each uniform = 8.841   feat norm = 0.433  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.244   loss each uniform = 12.209   feat norm = 0.446  
+
+Validation:
+Average incurred loss: 0.621  
+Average sample loss: 0.601  
+Average acc: 0.868  
+Average grad norm: 5.192  
+Average grad norm uniform: 33.686  
+Average loss each uniform: 8.661  
+Average feat norm: 0.447  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.009  exp loss = 0.006  adjusted loss = 0.006  adv prob = 0.250000   acc = 0.998   grad norm = 0.206   grad norm uniform = 34.073   loss each uniform = 11.637   feat norm = 0.422  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.919  exp loss = 0.991  adjusted loss = 0.991  adv prob = 0.250000   acc = 0.788   grad norm = 8.558   grad norm uniform = 33.225   loss each uniform = 5.973   feat norm = 0.478  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.134  exp loss = 2.281  adjusted loss = 2.281  adv prob = 0.250000   acc = 0.609   grad norm = 14.297   grad norm uniform = 29.488   loss each uniform = 5.228   feat norm = 0.421  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.214  exp loss = 0.218  adjusted loss = 0.218  adv prob = 0.250000   acc = 0.955   grad norm = 1.805   grad norm uniform = 38.143   loss each uniform = 11.061   feat norm = 0.452  
+Current lr: 0.001000
+Current validation accuracy: 0.8682235479354858
+
+
+Epoch [239]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.084  
+Average loss each uniform: 12.055  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.804   loss each uniform = 12.178   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.007   grad norm uniform = 41.618   loss each uniform = 9.676   feat norm = 0.529  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.020   grad norm uniform = 36.885   loss each uniform = 8.639   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 39.314   loss each uniform = 12.243   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.622  
+Average sample loss: 0.600  
+Average acc: 0.871  
+Average grad norm: 5.071  
+Average grad norm uniform: 34.080  
+Average loss each uniform: 8.881  
+Average feat norm: 0.451  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.004  exp loss = 0.003  adjusted loss = 0.003  adv prob = 0.250000   acc = 0.998   grad norm = 0.122   grad norm uniform = 34.454   loss each uniform = 12.082   feat norm = 0.426  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.822  exp loss = 0.896  adjusted loss = 0.896  adv prob = 0.250000   acc = 0.813   grad norm = 7.749   grad norm uniform = 33.895   loss each uniform = 6.214   feat norm = 0.482  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.461  exp loss = 2.599  adjusted loss = 2.599  adv prob = 0.250000   acc = 0.549   grad norm = 16.005   grad norm uniform = 29.346   loss each uniform = 5.189   feat norm = 0.425  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.252  exp loss = 0.250  adjusted loss = 0.250  adv prob = 0.250000   acc = 0.947   grad norm = 2.137   grad norm uniform = 38.149   loss each uniform = 10.680   feat norm = 0.456  
+Current lr: 0.001000
+Current validation accuracy: 0.8707256317138672
+
+
+Epoch [240]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.078  
+Average loss each uniform: 12.020  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.807   loss each uniform = 12.163   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.014   grad norm uniform = 41.608   loss each uniform = 9.587   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.018   grad norm uniform = 37.088   loss each uniform = 8.601   feat norm = 0.434  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 39.266   loss each uniform = 12.154   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.676  
+Average sample loss: 0.656  
+Average acc: 0.852  
+Average grad norm: 5.804  
+Average grad norm uniform: 33.739  
+Average loss each uniform: 8.450  
+Average feat norm: 0.450  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.013  exp loss = 0.008  adjusted loss = 0.008  adv prob = 0.250000   acc = 0.991   grad norm = 0.294   grad norm uniform = 34.177   loss each uniform = 11.260   feat norm = 0.426  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.123  exp loss = 1.230  adjusted loss = 1.230  adv prob = 0.250000   acc = 0.745   grad norm = 10.370   grad norm uniform = 32.535   loss each uniform = 5.559   feat norm = 0.477  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.931  exp loss = 2.090  adjusted loss = 2.090  adv prob = 0.250000   acc = 0.624   grad norm = 13.424   grad norm uniform = 30.929   loss each uniform = 5.414   feat norm = 0.430  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.180  exp loss = 0.190  adjusted loss = 0.190  adv prob = 0.250000   acc = 0.962   grad norm = 1.528   grad norm uniform = 39.229   loss each uniform = 11.750   feat norm = 0.460  
+Current lr: 0.001000
+Current validation accuracy: 0.8515429496765137
+
+
+Epoch [241]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.079  
+Average loss each uniform: 12.044  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.799   loss each uniform = 12.181   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.007   grad norm uniform = 41.573   loss each uniform = 9.600   feat norm = 0.529  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.019   grad norm uniform = 36.717   loss each uniform = 8.493   feat norm = 0.430  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.326   loss each uniform = 12.206   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.659  
+Average sample loss: 0.638  
+Average acc: 0.860  
+Average grad norm: 5.505  
+Average grad norm uniform: 33.647  
+Average loss each uniform: 8.616  
+Average feat norm: 0.447  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.009  exp loss = 0.006  adjusted loss = 0.006  adv prob = 0.250000   acc = 0.998   grad norm = 0.217   grad norm uniform = 34.039   loss each uniform = 11.624   feat norm = 0.422  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.013  exp loss = 1.082  adjusted loss = 1.082  adv prob = 0.250000   acc = 0.770   grad norm = 9.384   grad norm uniform = 33.110   loss each uniform = 5.849   feat norm = 0.479  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.155  exp loss = 2.292  adjusted loss = 2.292  adv prob = 0.250000   acc = 0.594   grad norm = 14.341   grad norm uniform = 29.540   loss each uniform = 5.191   feat norm = 0.420  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.205  exp loss = 0.211  adjusted loss = 0.211  adv prob = 0.250000   acc = 0.955   grad norm = 1.644   grad norm uniform = 38.262   loss each uniform = 11.171   feat norm = 0.452  
+Current lr: 0.001000
+Current validation accuracy: 0.8598832488059998
+
+
+Epoch [242]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.085  
+Average loss each uniform: 12.053  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.814   loss each uniform = 12.190   feat norm = 0.430  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.010   grad norm uniform = 41.528   loss each uniform = 9.590   feat norm = 0.528  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.012   grad norm uniform = 36.986   loss each uniform = 8.825   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.296   loss each uniform = 12.199   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.735  
+Average sample loss: 0.716  
+Average acc: 0.845  
+Average grad norm: 6.210  
+Average grad norm uniform: 33.562  
+Average loss each uniform: 8.329  
+Average feat norm: 0.450  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.020  exp loss = 0.012  adjusted loss = 0.012  adv prob = 0.250000   acc = 0.989   grad norm = 0.395   grad norm uniform = 33.777   loss each uniform = 10.927   feat norm = 0.422  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.333  exp loss = 1.428  adjusted loss = 1.428  adv prob = 0.250000   acc = 0.717   grad norm = 11.787   grad norm uniform = 32.339   loss each uniform = 5.382   feat norm = 0.480  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.725  exp loss = 1.860  adjusted loss = 1.860  adv prob = 0.250000   acc = 0.662   grad norm = 12.023   grad norm uniform = 30.807   loss each uniform = 5.582   feat norm = 0.426  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.159  exp loss = 0.169  adjusted loss = 0.169  adv prob = 0.250000   acc = 0.970   grad norm = 1.272   grad norm uniform = 39.846   loss each uniform = 12.277   feat norm = 0.462  
+Current lr: 0.001000
+Current validation accuracy: 0.8448706865310669
+
+
+Epoch [243]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.090  
+Average loss each uniform: 12.088  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.794   loss each uniform = 12.213   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.009   grad norm uniform = 41.825   loss each uniform = 9.740   feat norm = 0.532  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.013   grad norm uniform = 36.891   loss each uniform = 8.617   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.341   loss each uniform = 12.269   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.608  
+Average sample loss: 0.588  
+Average acc: 0.873  
+Average grad norm: 5.063  
+Average grad norm uniform: 33.513  
+Average loss each uniform: 8.620  
+Average feat norm: 0.445  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.008  exp loss = 0.005  adjusted loss = 0.005  adv prob = 0.250000   acc = 0.998   grad norm = 0.183   grad norm uniform = 33.965   loss each uniform = 11.631   feat norm = 0.422  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.875  exp loss = 0.950  adjusted loss = 0.950  adv prob = 0.250000   acc = 0.805   grad norm = 8.138   grad norm uniform = 32.833   loss each uniform = 5.892   feat norm = 0.471  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.169  exp loss = 2.295  adjusted loss = 2.295  adv prob = 0.250000   acc = 0.594   grad norm = 14.653   grad norm uniform = 29.707   loss each uniform = 5.214   feat norm = 0.425  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.213  exp loss = 0.214  adjusted loss = 0.214  adv prob = 0.250000   acc = 0.955   grad norm = 1.839   grad norm uniform = 38.112   loss each uniform = 11.013   feat norm = 0.453  
+Current lr: 0.001000
+Current validation accuracy: 0.8732276558876038
+
+
+Epoch [244]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.004  
+Average grad norm uniform: 36.077  
+Average loss each uniform: 12.056  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.792   loss each uniform = 12.196   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.007   grad norm uniform = 41.710   loss each uniform = 9.617   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.044   grad norm uniform = 36.715   loss each uniform = 8.450   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.008   grad norm uniform = 39.313   loss each uniform = 12.207   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.614  
+Average sample loss: 0.593  
+Average acc: 0.869  
+Average grad norm: 5.089  
+Average grad norm uniform: 33.867  
+Average loss each uniform: 8.754  
+Average feat norm: 0.449  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.005  exp loss = 0.003  adjusted loss = 0.003  adv prob = 0.250000   acc = 0.998   grad norm = 0.132   grad norm uniform = 34.230   loss each uniform = 11.831   feat norm = 0.424  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.835  exp loss = 0.901  adjusted loss = 0.901  adv prob = 0.250000   acc = 0.809   grad norm = 7.909   grad norm uniform = 33.530   loss each uniform = 6.110   feat norm = 0.478  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.348  exp loss = 2.467  adjusted loss = 2.467  adv prob = 0.250000   acc = 0.549   grad norm = 15.594   grad norm uniform = 29.464   loss each uniform = 5.179   feat norm = 0.425  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.246  exp loss = 0.230  adjusted loss = 0.230  adv prob = 0.250000   acc = 0.947   grad norm = 2.109   grad norm uniform = 38.179   loss each uniform = 10.788   feat norm = 0.455  
+Current lr: 0.001000
+Current validation accuracy: 0.8690575361251831
+
+
+Epoch [245]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.083  
+Average loss each uniform: 12.066  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.799   loss each uniform = 12.206   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.014   grad norm uniform = 41.677   loss each uniform = 9.536   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.020   grad norm uniform = 36.771   loss each uniform = 8.635   feat norm = 0.429  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.322   loss each uniform = 12.228   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.659  
+Average sample loss: 0.639  
+Average acc: 0.860  
+Average grad norm: 5.590  
+Average grad norm uniform: 33.955  
+Average loss each uniform: 8.553  
+Average feat norm: 0.453  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.013  exp loss = 0.008  adjusted loss = 0.008  adv prob = 0.250000   acc = 0.996   grad norm = 0.280   grad norm uniform = 34.186   loss each uniform = 11.418   feat norm = 0.426  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.058  exp loss = 1.146  adjusted loss = 1.146  adv prob = 0.250000   acc = 0.762   grad norm = 9.757   grad norm uniform = 33.206   loss each uniform = 5.743   feat norm = 0.484  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.995  exp loss = 2.141  adjusted loss = 2.141  adv prob = 0.250000   acc = 0.624   grad norm = 13.653   grad norm uniform = 30.627   loss each uniform = 5.355   feat norm = 0.428  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.188  exp loss = 0.192  adjusted loss = 0.192  adv prob = 0.250000   acc = 0.962   grad norm = 1.569   grad norm uniform = 39.091   loss each uniform = 11.537   feat norm = 0.461  
+Current lr: 0.001000
+Current validation accuracy: 0.8598832488059998
+
+
+Epoch [246]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.086  
+Average loss each uniform: 12.106  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.791   loss each uniform = 12.222   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 41.761   loss each uniform = 9.755   feat norm = 0.532  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.016   grad norm uniform = 36.856   loss each uniform = 8.714   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.344   loss each uniform = 12.312   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.751  
+Average sample loss: 0.731  
+Average acc: 0.840  
+Average grad norm: 6.297  
+Average grad norm uniform: 33.857  
+Average loss each uniform: 8.449  
+Average feat norm: 0.452  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.024  exp loss = 0.015  adjusted loss = 0.015  adv prob = 0.250000   acc = 0.987   grad norm = 0.444   grad norm uniform = 34.087   loss each uniform = 11.049   feat norm = 0.426  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.361  exp loss = 1.483  adjusted loss = 1.483  adv prob = 0.250000   acc = 0.710   grad norm = 11.914   grad norm uniform = 32.672   loss each uniform = 5.476   feat norm = 0.482  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.759  exp loss = 1.908  adjusted loss = 1.908  adv prob = 0.250000   acc = 0.647   grad norm = 12.169   grad norm uniform = 31.185   loss each uniform = 5.713   feat norm = 0.428  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.156  exp loss = 0.159  adjusted loss = 0.159  adv prob = 0.250000   acc = 0.970   grad norm = 1.300   grad norm uniform = 39.870   loss each uniform = 12.475   feat norm = 0.462  
+Current lr: 0.001000
+Current validation accuracy: 0.8398665189743042
+
+
+Epoch [247]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.074  
+Average loss each uniform: 12.078  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.784   loss each uniform = 12.199   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 41.691   loss each uniform = 9.887   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.018   grad norm uniform = 36.946   loss each uniform = 8.691   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 39.318   loss each uniform = 12.238   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.722  
+Average sample loss: 0.703  
+Average acc: 0.847  
+Average grad norm: 6.032  
+Average grad norm uniform: 33.905  
+Average loss each uniform: 8.533  
+Average feat norm: 0.451  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.022  exp loss = 0.013  adjusted loss = 0.013  adv prob = 0.250000   acc = 0.989   grad norm = 0.406   grad norm uniform = 34.286   loss each uniform = 11.263   feat norm = 0.428  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.274  exp loss = 1.390  adjusted loss = 1.390  adv prob = 0.250000   acc = 0.732   grad norm = 11.183   grad norm uniform = 32.746   loss each uniform = 5.570   feat norm = 0.480  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.798  exp loss = 1.943  adjusted loss = 1.943  adv prob = 0.250000   acc = 0.632   grad norm = 12.417   grad norm uniform = 31.211   loss each uniform = 5.624   feat norm = 0.428  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.172  exp loss = 0.176  adjusted loss = 0.176  adv prob = 0.250000   acc = 0.970   grad norm = 1.355   grad norm uniform = 39.317   loss each uniform = 12.236   feat norm = 0.458  
+Current lr: 0.001000
+Current validation accuracy: 0.8473727703094482
+
+
+Epoch [248]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.004  
+Average grad norm uniform: 36.070  
+Average loss each uniform: 12.043  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.801   loss each uniform = 12.182   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.015   grad norm uniform = 41.719   loss each uniform = 9.722   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.030   grad norm uniform = 37.095   loss each uniform = 8.728   feat norm = 0.433  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 39.235   loss each uniform = 12.162   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.661  
+Average sample loss: 0.643  
+Average acc: 0.856  
+Average grad norm: 5.584  
+Average grad norm uniform: 33.733  
+Average loss each uniform: 8.614  
+Average feat norm: 0.449  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.012  exp loss = 0.007  adjusted loss = 0.007  adv prob = 0.250000   acc = 0.996   grad norm = 0.272   grad norm uniform = 34.085   loss each uniform = 11.543   feat norm = 0.425  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.064  exp loss = 1.144  adjusted loss = 1.144  adv prob = 0.250000   acc = 0.758   grad norm = 9.764   grad norm uniform = 32.813   loss each uniform = 5.724   feat norm = 0.477  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.004  exp loss = 2.138  adjusted loss = 2.138  adv prob = 0.250000   acc = 0.609   grad norm = 13.588   grad norm uniform = 30.519   loss each uniform = 5.398   feat norm = 0.427  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.192  exp loss = 0.186  adjusted loss = 0.186  adv prob = 0.250000   acc = 0.955   grad norm = 1.584   grad norm uniform = 38.934   loss each uniform = 11.670   feat norm = 0.458  
+Current lr: 0.001000
+Current validation accuracy: 0.8557130098342896
+
+
+Epoch [249]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.079  
+Average loss each uniform: 12.096  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.792   loss each uniform = 12.222   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.007   grad norm uniform = 41.700   loss each uniform = 9.759   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.018   grad norm uniform = 36.882   loss each uniform = 8.618   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.315   loss each uniform = 12.269   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.651  
+Average sample loss: 0.631  
+Average acc: 0.862  
+Average grad norm: 5.562  
+Average grad norm uniform: 33.448  
+Average loss each uniform: 8.441  
+Average feat norm: 0.446  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.009  exp loss = 0.006  adjusted loss = 0.006  adv prob = 0.250000   acc = 0.998   grad norm = 0.227   grad norm uniform = 33.886   loss each uniform = 11.339   feat norm = 0.421  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.025  exp loss = 1.115  adjusted loss = 1.115  adv prob = 0.250000   acc = 0.768   grad norm = 9.581   grad norm uniform = 32.534   loss each uniform = 5.651   feat norm = 0.474  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.050  exp loss = 2.187  adjusted loss = 2.187  adv prob = 0.250000   acc = 0.617   grad norm = 14.118   grad norm uniform = 30.018   loss each uniform = 5.207   feat norm = 0.425  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.197  exp loss = 0.201  adjusted loss = 0.201  adv prob = 0.250000   acc = 0.955   grad norm = 1.658   grad norm uniform = 38.548   loss each uniform = 11.277   feat norm = 0.455  
+Current lr: 0.001000
+Current validation accuracy: 0.8615513443946838
+
+
+Epoch [250]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.082  
+Average loss each uniform: 12.100  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.793   loss each uniform = 12.232   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.007   grad norm uniform = 41.674   loss each uniform = 9.683   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.017   grad norm uniform = 37.109   loss each uniform = 8.884   feat norm = 0.433  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.321   loss each uniform = 12.254   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.653  
+Average sample loss: 0.633  
+Average acc: 0.861  
+Average grad norm: 5.484  
+Average grad norm uniform: 33.721  
+Average loss each uniform: 8.557  
+Average feat norm: 0.448  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.010  exp loss = 0.006  adjusted loss = 0.006  adv prob = 0.250000   acc = 0.998   grad norm = 0.210   grad norm uniform = 34.015   loss each uniform = 11.515   feat norm = 0.422  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.010  exp loss = 1.077  adjusted loss = 1.077  adv prob = 0.250000   acc = 0.773   grad norm = 9.370   grad norm uniform = 33.153   loss each uniform = 5.768   feat norm = 0.480  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.114  exp loss = 2.262  adjusted loss = 2.262  adv prob = 0.250000   acc = 0.594   grad norm = 14.194   grad norm uniform = 29.888   loss each uniform = 5.230   feat norm = 0.422  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.204  exp loss = 0.214  adjusted loss = 0.214  adv prob = 0.250000   acc = 0.955   grad norm = 1.676   grad norm uniform = 38.505   loss each uniform = 11.268   feat norm = 0.455  
+Current lr: 0.001000
+Current validation accuracy: 0.8607172966003418
+
+
+Epoch [251]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.075  
+Average loss each uniform: 12.090  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.796   loss each uniform = 12.235   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.008   grad norm uniform = 41.490   loss each uniform = 9.497   feat norm = 0.528  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.025   grad norm uniform = 37.014   loss each uniform = 8.779   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 39.314   loss each uniform = 12.237   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.662  
+Average sample loss: 0.643  
+Average acc: 0.857  
+Average grad norm: 5.602  
+Average grad norm uniform: 33.855  
+Average loss each uniform: 8.547  
+Average feat norm: 0.450  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.012  exp loss = 0.008  adjusted loss = 0.008  adv prob = 0.250000   acc = 0.994   grad norm = 0.284   grad norm uniform = 33.972   loss each uniform = 11.384   feat norm = 0.424  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.076  exp loss = 1.160  adjusted loss = 1.160  adv prob = 0.250000   acc = 0.760   grad norm = 9.860   grad norm uniform = 33.269   loss each uniform = 5.757   feat norm = 0.483  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.967  exp loss = 2.117  adjusted loss = 2.117  adv prob = 0.250000   acc = 0.617   grad norm = 13.412   grad norm uniform = 30.434   loss each uniform = 5.330   feat norm = 0.424  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.187  exp loss = 0.195  adjusted loss = 0.195  adv prob = 0.250000   acc = 0.962   grad norm = 1.549   grad norm uniform = 38.921   loss each uniform = 11.578   feat norm = 0.458  
+Current lr: 0.001000
+Current validation accuracy: 0.8573812246322632
+
+
+Epoch [252]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.076  
+Average loss each uniform: 12.089  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.804   loss each uniform = 12.218   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.010   grad norm uniform = 41.640   loss each uniform = 9.763   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.023   grad norm uniform = 36.730   loss each uniform = 8.442   feat norm = 0.430  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 39.281   loss each uniform = 12.263   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.750  
+Average sample loss: 0.731  
+Average acc: 0.840  
+Average grad norm: 6.320  
+Average grad norm uniform: 33.975  
+Average loss each uniform: 8.456  
+Average feat norm: 0.454  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.023  exp loss = 0.014  adjusted loss = 0.014  adv prob = 0.250000   acc = 0.987   grad norm = 0.426   grad norm uniform = 34.088   loss each uniform = 11.066   feat norm = 0.426  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.372  exp loss = 1.469  adjusted loss = 1.469  adv prob = 0.250000   acc = 0.708   grad norm = 12.054   grad norm uniform = 32.848   loss each uniform = 5.480   feat norm = 0.486  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.709  exp loss = 1.866  adjusted loss = 1.866  adv prob = 0.250000   acc = 0.654   grad norm = 11.953   grad norm uniform = 31.189   loss each uniform = 5.658   feat norm = 0.430  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.162  exp loss = 0.172  adjusted loss = 0.172  adv prob = 0.250000   acc = 0.970   grad norm = 1.293   grad norm uniform = 40.311   loss each uniform = 12.521   feat norm = 0.467  
+Current lr: 0.001000
+Current validation accuracy: 0.8398665189743042
+
+
+Epoch [253]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.074  
+Average loss each uniform: 12.107  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.785   loss each uniform = 12.233   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.009   grad norm uniform = 41.687   loss each uniform = 9.795   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.024   grad norm uniform = 36.750   loss each uniform = 8.488   feat norm = 0.430  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.324   loss each uniform = 12.284   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.649  
+Average sample loss: 0.630  
+Average acc: 0.865  
+Average grad norm: 5.473  
+Average grad norm uniform: 34.032  
+Average loss each uniform: 8.689  
+Average feat norm: 0.452  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.010  exp loss = 0.006  adjusted loss = 0.006  adv prob = 0.250000   acc = 0.998   grad norm = 0.230   grad norm uniform = 34.328   loss each uniform = 11.629   feat norm = 0.427  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.015  exp loss = 1.103  adjusted loss = 1.103  adv prob = 0.250000   acc = 0.777   grad norm = 9.368   grad norm uniform = 33.353   loss each uniform = 5.879   feat norm = 0.482  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.057  exp loss = 2.189  adjusted loss = 2.189  adv prob = 0.250000   acc = 0.617   grad norm = 13.967   grad norm uniform = 30.248   loss each uniform = 5.345   feat norm = 0.428  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.207  exp loss = 0.207  adjusted loss = 0.207  adv prob = 0.250000   acc = 0.955   grad norm = 1.741   grad norm uniform = 39.151   loss each uniform = 11.552   feat norm = 0.460  
+Current lr: 0.001000
+Current validation accuracy: 0.8648874759674072
+
+
+Epoch [254]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.004  
+Average grad norm uniform: 36.068  
+Average loss each uniform: 12.083  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.786   loss each uniform = 12.228   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.017   grad norm uniform = 41.648   loss each uniform = 9.653   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.024   grad norm uniform = 36.964   loss each uniform = 8.808   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 39.294   loss each uniform = 12.200   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.782  
+Average sample loss: 0.765  
+Average acc: 0.837  
+Average grad norm: 6.480  
+Average grad norm uniform: 34.065  
+Average loss each uniform: 8.465  
+Average feat norm: 0.455  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.028  exp loss = 0.017  adjusted loss = 0.017  adv prob = 0.250000   acc = 0.987   grad norm = 0.479   grad norm uniform = 34.117   loss each uniform = 10.942   feat norm = 0.427  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.481  exp loss = 1.593  adjusted loss = 1.593  adv prob = 0.250000   acc = 0.695   grad norm = 12.627   grad norm uniform = 32.876   loss each uniform = 5.440   feat norm = 0.486  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.616  exp loss = 1.759  adjusted loss = 1.759  adv prob = 0.250000   acc = 0.669   grad norm = 11.297   grad norm uniform = 31.501   loss each uniform = 5.865   feat norm = 0.430  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.148  exp loss = 0.152  adjusted loss = 0.152  adv prob = 0.250000   acc = 0.970   grad norm = 1.194   grad norm uniform = 40.614   loss each uniform = 12.964   feat norm = 0.467  
+Current lr: 0.001000
+Current validation accuracy: 0.8365304470062256
+
+
+Epoch [255]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.071  
+Average loss each uniform: 12.116  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.774   loss each uniform = 12.263   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.010   grad norm uniform = 41.655   loss each uniform = 9.556   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.023   grad norm uniform = 36.996   loss each uniform = 8.755   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.339   loss each uniform = 12.253   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.695  
+Average sample loss: 0.674  
+Average acc: 0.852  
+Average grad norm: 5.864  
+Average grad norm uniform: 33.897  
+Average loss each uniform: 8.497  
+Average feat norm: 0.451  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.018  exp loss = 0.011  adjusted loss = 0.011  adv prob = 0.250000   acc = 0.989   grad norm = 0.359   grad norm uniform = 33.864   loss each uniform = 11.160   feat norm = 0.422  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.201  exp loss = 1.296  adjusted loss = 1.296  adv prob = 0.250000   acc = 0.742   grad norm = 10.772   grad norm uniform = 32.842   loss each uniform = 5.579   feat norm = 0.482  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.820  exp loss = 1.970  adjusted loss = 1.970  adv prob = 0.250000   acc = 0.639   grad norm = 12.478   grad norm uniform = 31.495   loss each uniform = 5.592   feat norm = 0.429  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.171  exp loss = 0.181  adjusted loss = 0.181  adv prob = 0.250000   acc = 0.970   grad norm = 1.387   grad norm uniform = 40.109   loss each uniform = 12.279   feat norm = 0.468  
+Current lr: 0.001000
+Current validation accuracy: 0.8523769378662109
+
+
+Epoch [256]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.004  
+Average grad norm uniform: 36.064  
+Average loss each uniform: 12.109  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.761   loss each uniform = 12.263   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.025   grad norm uniform = 41.611   loss each uniform = 9.711   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.022   grad norm uniform = 37.079   loss each uniform = 8.610   feat norm = 0.434  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 39.357   loss each uniform = 12.205   feat norm = 0.448  
+
+Validation:
+Average incurred loss: 0.642  
+Average sample loss: 0.622  
+Average acc: 0.865  
+Average grad norm: 5.424  
+Average grad norm uniform: 33.709  
+Average loss each uniform: 8.593  
+Average feat norm: 0.448  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.009  exp loss = 0.006  adjusted loss = 0.006  adv prob = 0.250000   acc = 0.998   grad norm = 0.216   grad norm uniform = 34.162   loss each uniform = 11.576   feat norm = 0.424  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.972  exp loss = 1.057  adjusted loss = 1.057  adv prob = 0.250000   acc = 0.785   grad norm = 9.037   grad norm uniform = 32.894   loss each uniform = 5.798   feat norm = 0.476  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.147  exp loss = 2.293  adjusted loss = 2.293  adv prob = 0.250000   acc = 0.594   grad norm = 14.643   grad norm uniform = 30.103   loss each uniform = 5.243   feat norm = 0.427  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.202  exp loss = 0.204  adjusted loss = 0.204  adv prob = 0.250000   acc = 0.947   grad norm = 1.833   grad norm uniform = 38.580   loss each uniform = 11.264   feat norm = 0.457  
+Current lr: 0.001000
+Current validation accuracy: 0.8648873567581177
+
+
+Epoch [257]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.062  
+Average loss each uniform: 12.122  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.764   loss each uniform = 12.274   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.007   grad norm uniform = 41.683   loss each uniform = 9.658   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.022   grad norm uniform = 37.075   loss each uniform = 8.769   feat norm = 0.433  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 39.326   loss each uniform = 12.224   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.671  
+Average sample loss: 0.651  
+Average acc: 0.854  
+Average grad norm: 5.667  
+Average grad norm uniform: 33.899  
+Average loss each uniform: 8.570  
+Average feat norm: 0.451  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.014  exp loss = 0.008  adjusted loss = 0.008  adv prob = 0.250000   acc = 0.996   grad norm = 0.279   grad norm uniform = 34.175   loss each uniform = 11.408   feat norm = 0.426  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.106  exp loss = 1.175  adjusted loss = 1.175  adv prob = 0.250000   acc = 0.751   grad norm = 10.078   grad norm uniform = 33.031   loss each uniform = 5.693   feat norm = 0.481  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.931  exp loss = 2.082  adjusted loss = 2.082  adv prob = 0.250000   acc = 0.617   grad norm = 13.235   grad norm uniform = 30.647   loss each uniform = 5.436   feat norm = 0.427  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.193  exp loss = 0.196  adjusted loss = 0.196  adv prob = 0.250000   acc = 0.955   grad norm = 1.566   grad norm uniform = 39.221   loss each uniform = 11.815   feat norm = 0.459  
+Current lr: 0.001000
+Current validation accuracy: 0.854045033454895
+
+
+Epoch [258]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.066  
+Average loss each uniform: 12.158  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.752   loss each uniform = 12.288   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 41.726   loss each uniform = 9.962   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.014   grad norm uniform = 37.245   loss each uniform = 8.843   feat norm = 0.435  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.370   loss each uniform = 12.287   feat norm = 0.448  
+
+Validation:
+Average incurred loss: 0.678  
+Average sample loss: 0.660  
+Average acc: 0.852  
+Average grad norm: 5.808  
+Average grad norm uniform: 33.473  
+Average loss each uniform: 8.382  
+Average feat norm: 0.449  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.014  exp loss = 0.008  adjusted loss = 0.008  adv prob = 0.250000   acc = 0.996   grad norm = 0.289   grad norm uniform = 33.944   loss each uniform = 11.199   feat norm = 0.424  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.133  exp loss = 1.228  adjusted loss = 1.228  adv prob = 0.250000   acc = 0.740   grad norm = 10.436   grad norm uniform = 32.420   loss each uniform = 5.511   feat norm = 0.477  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.927  exp loss = 2.064  adjusted loss = 2.064  adv prob = 0.250000   acc = 0.617   grad norm = 13.345   grad norm uniform = 30.063   loss each uniform = 5.316   feat norm = 0.425  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.169  exp loss = 0.175  adjusted loss = 0.175  adv prob = 0.250000   acc = 0.970   grad norm = 1.434   grad norm uniform = 38.921   loss each uniform = 11.614   feat norm = 0.457  
+Current lr: 0.001000
+Current validation accuracy: 0.8515429496765137
+
+
+Epoch [259]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.067  
+Average loss each uniform: 12.168  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.761   loss each uniform = 12.298   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 41.715   loss each uniform = 9.932   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.011   grad norm uniform = 36.939   loss each uniform = 8.885   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.363   loss each uniform = 12.301   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.696  
+Average sample loss: 0.677  
+Average acc: 0.851  
+Average grad norm: 5.778  
+Average grad norm uniform: 33.738  
+Average loss each uniform: 8.606  
+Average feat norm: 0.448  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.015  exp loss = 0.009  adjusted loss = 0.009  adv prob = 0.250000   acc = 0.991   grad norm = 0.307   grad norm uniform = 33.928   loss each uniform = 11.451   feat norm = 0.423  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.172  exp loss = 1.259  adjusted loss = 1.259  adv prob = 0.250000   acc = 0.740   grad norm = 10.433   grad norm uniform = 32.804   loss each uniform = 5.665   feat norm = 0.478  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.930  exp loss = 2.086  adjusted loss = 2.086  adv prob = 0.250000   acc = 0.632   grad norm = 12.958   grad norm uniform = 30.895   loss each uniform = 5.549   feat norm = 0.425  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.185  exp loss = 0.188  adjusted loss = 0.188  adv prob = 0.250000   acc = 0.962   grad norm = 1.502   grad norm uniform = 39.182   loss each uniform = 11.980   feat norm = 0.458  
+Current lr: 0.001000
+Current validation accuracy: 0.8507089614868164
+
+
+Epoch [260]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.060  
+Average loss each uniform: 12.135  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.754   loss each uniform = 12.287   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.008   grad norm uniform = 41.658   loss each uniform = 9.756   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.021   grad norm uniform = 36.832   loss each uniform = 8.515   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.369   loss each uniform = 12.237   feat norm = 0.448  
+
+Validation:
+Average incurred loss: 0.696  
+Average sample loss: 0.677  
+Average acc: 0.854  
+Average grad norm: 5.829  
+Average grad norm uniform: 33.608  
+Average loss each uniform: 8.519  
+Average feat norm: 0.449  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.013  exp loss = 0.008  adjusted loss = 0.008  adv prob = 0.250000   acc = 0.996   grad norm = 0.279   grad norm uniform = 33.823   loss each uniform = 11.381   feat norm = 0.421  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.167  exp loss = 1.240  adjusted loss = 1.240  adv prob = 0.250000   acc = 0.747   grad norm = 10.533   grad norm uniform = 32.908   loss each uniform = 5.633   feat norm = 0.482  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.956  exp loss = 2.087  adjusted loss = 2.087  adv prob = 0.250000   acc = 0.617   grad norm = 13.214   grad norm uniform = 29.888   loss each uniform = 5.345   feat norm = 0.421  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.181  exp loss = 0.190  adjusted loss = 0.190  adv prob = 0.250000   acc = 0.970   grad norm = 1.451   grad norm uniform = 39.023   loss each uniform = 11.758   feat norm = 0.456  
+Current lr: 0.001000
+Current validation accuracy: 0.854045033454895
+
+
+Epoch [261]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.062  
+Average loss each uniform: 12.168  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.743   loss each uniform = 12.306   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 41.785   loss each uniform = 9.898   feat norm = 0.532  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.017   grad norm uniform = 36.838   loss each uniform = 8.720   feat norm = 0.430  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.388   loss each uniform = 12.292   feat norm = 0.448  
+
+Validation:
+Average incurred loss: 0.687  
+Average sample loss: 0.668  
+Average acc: 0.852  
+Average grad norm: 5.773  
+Average grad norm uniform: 33.870  
+Average loss each uniform: 8.596  
+Average feat norm: 0.450  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.014  exp loss = 0.008  adjusted loss = 0.008  adv prob = 0.250000   acc = 0.994   grad norm = 0.291   grad norm uniform = 34.138   loss each uniform = 11.487   feat norm = 0.425  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.141  exp loss = 1.227  adjusted loss = 1.227  adv prob = 0.250000   acc = 0.740   grad norm = 10.344   grad norm uniform = 33.004   loss each uniform = 5.669   feat norm = 0.480  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.972  exp loss = 2.121  adjusted loss = 2.121  adv prob = 0.250000   acc = 0.624   grad norm = 13.311   grad norm uniform = 30.685   loss each uniform = 5.449   feat norm = 0.426  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.177  exp loss = 0.184  adjusted loss = 0.184  adv prob = 0.250000   acc = 0.970   grad norm = 1.472   grad norm uniform = 39.153   loss each uniform = 11.845   feat norm = 0.459  
+Current lr: 0.001000
+Current validation accuracy: 0.8515429496765137
+
+
+Epoch [262]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.067  
+Average loss each uniform: 12.168  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.751   loss each uniform = 12.308   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.010   grad norm uniform = 41.766   loss each uniform = 9.861   feat norm = 0.532  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.024   grad norm uniform = 36.787   loss each uniform = 8.465   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.391   loss each uniform = 12.303   feat norm = 0.448  
+
+Validation:
+Average incurred loss: 0.798  
+Average sample loss: 0.781  
+Average acc: 0.826  
+Average grad norm: 6.633  
+Average grad norm uniform: 33.410  
+Average loss each uniform: 8.249  
+Average feat norm: 0.446  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.030  exp loss = 0.019  adjusted loss = 0.019  adv prob = 0.250000   acc = 0.987   grad norm = 0.527   grad norm uniform = 33.452   loss each uniform = 10.605   feat norm = 0.418  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.526  exp loss = 1.656  adjusted loss = 1.656  adv prob = 0.250000   acc = 0.672   grad norm = 13.000   grad norm uniform = 32.048   loss each uniform = 5.253   feat norm = 0.475  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.601  exp loss = 1.754  adjusted loss = 1.754  adv prob = 0.250000   acc = 0.654   grad norm = 11.267   grad norm uniform = 31.203   loss each uniform = 5.851   feat norm = 0.426  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.143  exp loss = 0.149  adjusted loss = 0.149  adv prob = 0.250000   acc = 0.970   grad norm = 1.127   grad norm uniform = 40.246   loss each uniform = 12.871   feat norm = 0.463  
+Current lr: 0.001000
+Current validation accuracy: 0.8256880640983582
+
+
+Epoch [263]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.053  
+Average loss each uniform: 12.134  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.748   loss each uniform = 12.285   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 41.753   loss each uniform = 9.942   feat norm = 0.532  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.023   grad norm uniform = 37.274   loss each uniform = 9.023   feat norm = 0.434  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.007   grad norm uniform = 39.316   loss each uniform = 12.180   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.767  
+Average sample loss: 0.746  
+Average acc: 0.835  
+Average grad norm: 6.473  
+Average grad norm uniform: 33.726  
+Average loss each uniform: 8.345  
+Average feat norm: 0.451  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.024  exp loss = 0.015  adjusted loss = 0.015  adv prob = 0.250000   acc = 0.987   grad norm = 0.458   grad norm uniform = 33.886   loss each uniform = 10.896   feat norm = 0.423  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.409  exp loss = 1.524  adjusted loss = 1.524  adv prob = 0.250000   acc = 0.697   grad norm = 12.380   grad norm uniform = 32.606   loss each uniform = 5.387   feat norm = 0.482  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.736  exp loss = 1.880  adjusted loss = 1.880  adv prob = 0.250000   acc = 0.647   grad norm = 12.162   grad norm uniform = 30.904   loss each uniform = 5.640   feat norm = 0.425  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.154  exp loss = 0.169  adjusted loss = 0.169  adv prob = 0.250000   acc = 0.970   grad norm = 1.206   grad norm uniform = 39.909   loss each uniform = 12.456   feat norm = 0.462  
+Current lr: 0.001000
+Current validation accuracy: 0.8348624110221863
+
+
+Epoch [264]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.055  
+Average loss each uniform: 12.149  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.750   loss each uniform = 12.299   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.007   grad norm uniform = 41.703   loss each uniform = 9.919   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.020   grad norm uniform = 37.121   loss each uniform = 8.784   feat norm = 0.433  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 39.336   loss each uniform = 12.217   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.663  
+Average sample loss: 0.643  
+Average acc: 0.862  
+Average grad norm: 5.517  
+Average grad norm uniform: 33.873  
+Average loss each uniform: 8.698  
+Average feat norm: 0.452  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.012  exp loss = 0.008  adjusted loss = 0.008  adv prob = 0.250000   acc = 0.994   grad norm = 0.273   grad norm uniform = 34.157   loss each uniform = 11.623   feat norm = 0.426  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.052  exp loss = 1.135  adjusted loss = 1.135  adv prob = 0.250000   acc = 0.773   grad norm = 9.571   grad norm uniform = 33.192   loss each uniform = 5.862   feat norm = 0.483  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.045  exp loss = 2.183  adjusted loss = 2.183  adv prob = 0.250000   acc = 0.617   grad norm = 13.630   grad norm uniform = 30.190   loss each uniform = 5.420   feat norm = 0.426  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.199  exp loss = 0.205  adjusted loss = 0.205  adv prob = 0.250000   acc = 0.955   grad norm = 1.614   grad norm uniform = 38.945   loss each uniform = 11.641   feat norm = 0.458  
+Current lr: 0.001000
+Current validation accuracy: 0.8615513443946838
+
+
+Epoch [265]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.058  
+Average loss each uniform: 12.188  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.742   loss each uniform = 12.328   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 41.758   loss each uniform = 9.856   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.012   grad norm uniform = 37.166   loss each uniform = 8.983   feat norm = 0.433  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 39.362   loss each uniform = 12.300   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.669  
+Average sample loss: 0.649  
+Average acc: 0.857  
+Average grad norm: 5.553  
+Average grad norm uniform: 33.953  
+Average loss each uniform: 8.747  
+Average feat norm: 0.451  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.013  exp loss = 0.008  adjusted loss = 0.008  adv prob = 0.250000   acc = 0.996   grad norm = 0.278   grad norm uniform = 34.244   loss each uniform = 11.624   feat norm = 0.426  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.102  exp loss = 1.203  adjusted loss = 1.203  adv prob = 0.250000   acc = 0.755   grad norm = 9.851   grad norm uniform = 33.106   loss each uniform = 5.861   feat norm = 0.480  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.934  exp loss = 2.074  adjusted loss = 2.074  adv prob = 0.250000   acc = 0.617   grad norm = 13.030   grad norm uniform = 30.742   loss each uniform = 5.557   feat norm = 0.426  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.186  exp loss = 0.187  adjusted loss = 0.187  adv prob = 0.250000   acc = 0.962   grad norm = 1.542   grad norm uniform = 39.112   loss each uniform = 11.951   feat norm = 0.458  
+Current lr: 0.001000
+Current validation accuracy: 0.8565471172332764
+
+
+Epoch [266]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.063  
+Average loss each uniform: 12.186  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.754   loss each uniform = 12.325   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 41.721   loss each uniform = 9.925   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.018   grad norm uniform = 36.818   loss each uniform = 8.516   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.368   loss each uniform = 12.315   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.629  
+Average sample loss: 0.607  
+Average acc: 0.872  
+Average grad norm: 5.214  
+Average grad norm uniform: 34.029  
+Average loss each uniform: 8.699  
+Average feat norm: 0.451  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.007  exp loss = 0.004  adjusted loss = 0.004  adv prob = 0.250000   acc = 0.998   grad norm = 0.174   grad norm uniform = 34.298   loss each uniform = 11.729   feat norm = 0.426  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.911  exp loss = 0.980  adjusted loss = 0.980  adv prob = 0.250000   acc = 0.803   grad norm = 8.486   grad norm uniform = 33.632   loss each uniform = 5.985   feat norm = 0.483  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.229  exp loss = 2.364  adjusted loss = 2.364  adv prob = 0.250000   acc = 0.586   grad norm = 14.808   grad norm uniform = 29.883   loss each uniform = 5.234   feat norm = 0.427  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.225  exp loss = 0.220  adjusted loss = 0.220  adv prob = 0.250000   acc = 0.955   grad norm = 1.854   grad norm uniform = 38.620   loss each uniform = 11.037   feat norm = 0.458  
+Current lr: 0.001000
+Current validation accuracy: 0.8715596199035645
+
+
+Epoch [267]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.053  
+Average loss each uniform: 12.174  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.748   loss each uniform = 12.317   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 41.702   loss each uniform = 9.920   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.015   grad norm uniform = 37.137   loss each uniform = 8.837   feat norm = 0.433  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.330   loss each uniform = 12.268   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.661  
+Average sample loss: 0.640  
+Average acc: 0.863  
+Average grad norm: 5.471  
+Average grad norm uniform: 34.097  
+Average loss each uniform: 8.782  
+Average feat norm: 0.454  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.009  exp loss = 0.005  adjusted loss = 0.005  adv prob = 0.250000   acc = 0.998   grad norm = 0.199   grad norm uniform = 34.584   loss each uniform = 11.880   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.010  exp loss = 1.093  adjusted loss = 1.093  adv prob = 0.250000   acc = 0.781   grad norm = 9.236   grad norm uniform = 33.417   loss each uniform = 5.950   feat norm = 0.484  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.185  exp loss = 2.325  adjusted loss = 2.325  adv prob = 0.250000   acc = 0.579   grad norm = 14.550   grad norm uniform = 30.261   loss each uniform = 5.281   feat norm = 0.428  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.205  exp loss = 0.208  adjusted loss = 0.208  adv prob = 0.250000   acc = 0.962   grad norm = 1.710   grad norm uniform = 38.602   loss each uniform = 11.327   feat norm = 0.458  
+Current lr: 0.001000
+Current validation accuracy: 0.8632193803787231
+
+
+Epoch [268]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.058  
+Average loss each uniform: 12.187  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.741   loss each uniform = 12.329   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 41.746   loss each uniform = 9.928   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.020   grad norm uniform = 37.073   loss each uniform = 8.800   feat norm = 0.433  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.371   loss each uniform = 12.289   feat norm = 0.448  
+
+Validation:
+Average incurred loss: 0.599  
+Average sample loss: 0.577  
+Average acc: 0.878  
+Average grad norm: 4.769  
+Average grad norm uniform: 33.683  
+Average loss each uniform: 8.994  
+Average feat norm: 0.445  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.002  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.069   grad norm uniform = 34.270   loss each uniform = 12.361   feat norm = 0.423  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.692  exp loss = 0.756  adjusted loss = 0.756  adv prob = 0.250000   acc = 0.843   grad norm = 6.629   grad norm uniform = 33.642   loss each uniform = 6.401   feat norm = 0.473  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.690  exp loss = 2.833  adjusted loss = 2.833  adv prob = 0.250000   acc = 0.511   grad norm = 17.101   grad norm uniform = 28.356   loss each uniform = 5.096   feat norm = 0.419  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.280  exp loss = 0.275  adjusted loss = 0.275  adv prob = 0.250000   acc = 0.940   grad norm = 2.421   grad norm uniform = 37.090   loss each uniform = 10.152   feat norm = 0.446  
+Current lr: 0.001000
+Current validation accuracy: 0.8782318830490112
+
+
+Epoch [269]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.061  
+Average loss each uniform: 12.198  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.750   loss each uniform = 12.335   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 41.651   loss each uniform = 9.925   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.020   grad norm uniform = 37.136   loss each uniform = 8.756   feat norm = 0.434  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.369   loss each uniform = 12.324   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.661  
+Average sample loss: 0.639  
+Average acc: 0.862  
+Average grad norm: 5.524  
+Average grad norm uniform: 33.459  
+Average loss each uniform: 8.539  
+Average feat norm: 0.446  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.010  exp loss = 0.006  adjusted loss = 0.006  adv prob = 0.250000   acc = 0.998   grad norm = 0.230   grad norm uniform = 33.844   loss each uniform = 11.507   feat norm = 0.421  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.016  exp loss = 1.094  adjusted loss = 1.094  adv prob = 0.250000   acc = 0.777   grad norm = 9.384   grad norm uniform = 32.618   loss each uniform = 5.701   feat norm = 0.476  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.176  exp loss = 2.318  adjusted loss = 2.318  adv prob = 0.250000   acc = 0.586   grad norm = 14.498   grad norm uniform = 29.942   loss each uniform = 5.287   feat norm = 0.424  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.192  exp loss = 0.201  adjusted loss = 0.201  adv prob = 0.250000   acc = 0.955   grad norm = 1.614   grad norm uniform = 38.569   loss each uniform = 11.311   feat norm = 0.456  
+Current lr: 0.001000
+Current validation accuracy: 0.8615512847900391
+
+
+Epoch [270]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.048  
+Average loss each uniform: 12.156  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.743   loss each uniform = 12.308   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.009   grad norm uniform = 41.726   loss each uniform = 9.892   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.023   grad norm uniform = 36.930   loss each uniform = 8.604   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 39.331   loss each uniform = 12.234   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.637  
+Average sample loss: 0.616  
+Average acc: 0.863  
+Average grad norm: 5.301  
+Average grad norm uniform: 33.608  
+Average loss each uniform: 8.675  
+Average feat norm: 0.447  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.006  exp loss = 0.004  adjusted loss = 0.004  adv prob = 0.250000   acc = 0.998   grad norm = 0.166   grad norm uniform = 34.103   loss each uniform = 11.752   feat norm = 0.423  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.920  exp loss = 1.005  adjusted loss = 1.005  adv prob = 0.250000   acc = 0.783   grad norm = 8.604   grad norm uniform = 32.988   loss each uniform = 5.911   feat norm = 0.476  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.275  exp loss = 2.413  adjusted loss = 2.413  adv prob = 0.250000   acc = 0.586   grad norm = 15.091   grad norm uniform = 29.566   loss each uniform = 5.212   feat norm = 0.425  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.225  exp loss = 0.221  adjusted loss = 0.221  adv prob = 0.250000   acc = 0.947   grad norm = 1.968   grad norm uniform = 38.087   loss each uniform = 11.015   feat norm = 0.453  
+Current lr: 0.001000
+Current validation accuracy: 0.8632193803787231
+
+
+Epoch [271]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.004  
+Average grad norm uniform: 36.041  
+Average loss each uniform: 12.137  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.744   loss each uniform = 12.302   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.012   grad norm uniform = 41.713   loss each uniform = 9.710   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.002  adjusted loss = 0.002  adv prob = 0.250000   acc = 1.000   grad norm = 0.030   grad norm uniform = 36.941   loss each uniform = 8.581   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.008   grad norm uniform = 39.297   loss each uniform = 12.199   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.630  
+Average sample loss: 0.608  
+Average acc: 0.870  
+Average grad norm: 5.076  
+Average grad norm uniform: 33.802  
+Average loss each uniform: 8.892  
+Average feat norm: 0.446  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.005  exp loss = 0.003  adjusted loss = 0.003  adv prob = 0.250000   acc = 0.998   grad norm = 0.132   grad norm uniform = 34.187   loss each uniform = 12.090   feat norm = 0.422  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.856  exp loss = 0.916  adjusted loss = 0.916  adv prob = 0.250000   acc = 0.809   grad norm = 7.912   grad norm uniform = 33.536   loss each uniform = 6.162   feat norm = 0.477  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.425  exp loss = 2.567  adjusted loss = 2.567  adv prob = 0.250000   acc = 0.549   grad norm = 15.572   grad norm uniform = 29.264   loss each uniform = 5.234   feat norm = 0.421  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.240  exp loss = 0.244  adjusted loss = 0.244  adv prob = 0.250000   acc = 0.955   grad norm = 2.006   grad norm uniform = 37.919   loss each uniform = 10.882   feat norm = 0.452  
+Current lr: 0.001000
+Current validation accuracy: 0.8698915243148804
+
+
+Epoch [272]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.058  
+Average loss each uniform: 12.179  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.770   loss each uniform = 12.327   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.010   grad norm uniform = 41.599   loss each uniform = 9.703   feat norm = 0.529  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.023   grad norm uniform = 36.912   loss each uniform = 8.824   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 39.309   loss each uniform = 12.300   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.811  
+Average sample loss: 0.794  
+Average acc: 0.826  
+Average grad norm: 6.639  
+Average grad norm uniform: 33.327  
+Average loss each uniform: 8.307  
+Average feat norm: 0.446  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.029  exp loss = 0.018  adjusted loss = 0.018  adv prob = 0.250000   acc = 0.987   grad norm = 0.490   grad norm uniform = 33.513   loss each uniform = 10.736   feat norm = 0.419  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.554  exp loss = 1.673  adjusted loss = 1.673  adv prob = 0.250000   acc = 0.667   grad norm = 13.047   grad norm uniform = 31.919   loss each uniform = 5.263   feat norm = 0.475  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.621  exp loss = 1.761  adjusted loss = 1.761  adv prob = 0.250000   acc = 0.669   grad norm = 11.256   grad norm uniform = 31.016   loss each uniform = 5.848   feat norm = 0.424  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.141  exp loss = 0.143  adjusted loss = 0.143  adv prob = 0.250000   acc = 0.970   grad norm = 1.161   grad norm uniform = 39.920   loss each uniform = 12.908   feat norm = 0.458  
+Current lr: 0.001000
+Current validation accuracy: 0.8256881237030029
+
+
+Epoch [273]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.048  
+Average loss each uniform: 12.184  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.750   loss each uniform = 12.327   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.009   grad norm uniform = 41.677   loss each uniform = 9.770   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.026   grad norm uniform = 36.940   loss each uniform = 8.759   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 39.315   loss each uniform = 12.314   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.656  
+Average sample loss: 0.634  
+Average acc: 0.865  
+Average grad norm: 5.364  
+Average grad norm uniform: 33.896  
+Average loss each uniform: 8.818  
+Average feat norm: 0.450  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.006  exp loss = 0.004  adjusted loss = 0.004  adv prob = 0.250000   acc = 0.998   grad norm = 0.147   grad norm uniform = 34.391   loss each uniform = 12.043   feat norm = 0.426  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.944  exp loss = 1.008  adjusted loss = 1.008  adv prob = 0.250000   acc = 0.792   grad norm = 8.765   grad norm uniform = 33.449   loss each uniform = 5.993   feat norm = 0.481  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.368  exp loss = 2.515  adjusted loss = 2.515  adv prob = 0.250000   acc = 0.564   grad norm = 15.307   grad norm uniform = 29.555   loss each uniform = 5.218   feat norm = 0.422  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.220  exp loss = 0.227  adjusted loss = 0.227  adv prob = 0.250000   acc = 0.955   grad norm = 1.827   grad norm uniform = 38.070   loss each uniform = 10.991   feat norm = 0.453  
+Current lr: 0.001000
+Current validation accuracy: 0.8648874759674072
+
+
+Epoch [274]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.051  
+Average loss each uniform: 12.196  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.763   loss each uniform = 12.329   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.007   grad norm uniform = 41.741   loss each uniform = 9.823   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.022   grad norm uniform = 36.915   loss each uniform = 8.866   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.276   loss each uniform = 12.346   feat norm = 0.446  
+
+Validation:
+Average incurred loss: 0.732  
+Average sample loss: 0.713  
+Average acc: 0.846  
+Average grad norm: 6.097  
+Average grad norm uniform: 33.940  
+Average loss each uniform: 8.571  
+Average feat norm: 0.452  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.021  exp loss = 0.012  adjusted loss = 0.012  adv prob = 0.250000   acc = 0.991   grad norm = 0.397   grad norm uniform = 34.029   loss each uniform = 11.312   feat norm = 0.425  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.288  exp loss = 1.396  adjusted loss = 1.396  adv prob = 0.250000   acc = 0.725   grad norm = 11.342   grad norm uniform = 33.170   loss each uniform = 5.643   feat norm = 0.485  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.835  exp loss = 1.983  adjusted loss = 1.983  adv prob = 0.250000   acc = 0.632   grad norm = 12.468   grad norm uniform = 30.706   loss each uniform = 5.571   feat norm = 0.424  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.178  exp loss = 0.188  adjusted loss = 0.188  adv prob = 0.250000   acc = 0.970   grad norm = 1.365   grad norm uniform = 39.560   loss each uniform = 12.205   feat norm = 0.459  
+Current lr: 0.001000
+Current validation accuracy: 0.8457047939300537
+
+
+Epoch [275]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.055  
+Average loss each uniform: 12.204  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.766   loss each uniform = 12.338   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.007   grad norm uniform = 41.576   loss each uniform = 9.799   feat norm = 0.529  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.015   grad norm uniform = 37.174   loss each uniform = 8.885   feat norm = 0.434  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.301   loss each uniform = 12.356   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.644  
+Average sample loss: 0.624  
+Average acc: 0.862  
+Average grad norm: 5.370  
+Average grad norm uniform: 33.516  
+Average loss each uniform: 8.758  
+Average feat norm: 0.446  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.006  exp loss = 0.004  adjusted loss = 0.004  adv prob = 0.250000   acc = 0.998   grad norm = 0.151   grad norm uniform = 34.266   loss each uniform = 11.957   feat norm = 0.424  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.940  exp loss = 1.008  adjusted loss = 1.008  adv prob = 0.250000   acc = 0.781   grad norm = 8.849   grad norm uniform = 32.825   loss each uniform = 5.962   feat norm = 0.475  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.268  exp loss = 2.416  adjusted loss = 2.416  adv prob = 0.250000   acc = 0.586   grad norm = 14.995   grad norm uniform = 28.984   loss each uniform = 5.141   feat norm = 0.420  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.222  exp loss = 0.221  adjusted loss = 0.221  adv prob = 0.250000   acc = 0.947   grad norm = 1.884   grad norm uniform = 37.831   loss each uniform = 10.940   feat norm = 0.449  
+Current lr: 0.001000
+Current validation accuracy: 0.8623853325843811
+
+
+Epoch [276]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.052  
+Average loss each uniform: 12.223  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.751   loss each uniform = 12.359   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.007   grad norm uniform = 41.661   loss each uniform = 9.676   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.014   grad norm uniform = 37.019   loss each uniform = 8.865   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.333   loss each uniform = 12.396   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.630  
+Average sample loss: 0.610  
+Average acc: 0.871  
+Average grad norm: 5.124  
+Average grad norm uniform: 33.986  
+Average loss each uniform: 8.920  
+Average feat norm: 0.451  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.009  exp loss = 0.006  adjusted loss = 0.006  adv prob = 0.250000   acc = 0.998   grad norm = 0.208   grad norm uniform = 34.335   loss each uniform = 12.024   feat norm = 0.427  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.916  exp loss = 0.997  adjusted loss = 0.997  adv prob = 0.250000   acc = 0.796   grad norm = 8.319   grad norm uniform = 33.543   loss each uniform = 6.150   feat norm = 0.482  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.217  exp loss = 2.368  adjusted loss = 2.368  adv prob = 0.250000   acc = 0.609   grad norm = 14.405   grad norm uniform = 29.958   loss each uniform = 5.378   feat norm = 0.425  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.224  exp loss = 0.222  adjusted loss = 0.222  adv prob = 0.250000   acc = 0.947   grad norm = 1.915   grad norm uniform = 38.342   loss each uniform = 11.264   feat norm = 0.455  
+Current lr: 0.001000
+Current validation accuracy: 0.8707256317138672
+
+
+Epoch [277]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.055  
+Average loss each uniform: 12.223  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.769   loss each uniform = 12.355   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.011   grad norm uniform = 41.588   loss each uniform = 9.779   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.014   grad norm uniform = 37.059   loss each uniform = 8.958   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.293   loss each uniform = 12.382   feat norm = 0.446  
+
+Validation:
+Average incurred loss: 0.659  
+Average sample loss: 0.638  
+Average acc: 0.863  
+Average grad norm: 5.411  
+Average grad norm uniform: 33.774  
+Average loss each uniform: 8.739  
+Average feat norm: 0.449  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.009  exp loss = 0.005  adjusted loss = 0.005  adv prob = 0.250000   acc = 0.998   grad norm = 0.203   grad norm uniform = 34.234   loss each uniform = 11.806   feat norm = 0.425  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.002  exp loss = 1.085  adjusted loss = 1.085  adv prob = 0.250000   acc = 0.779   grad norm = 9.110   grad norm uniform = 33.194   loss each uniform = 5.934   feat norm = 0.480  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.189  exp loss = 2.357  adjusted loss = 2.357  adv prob = 0.250000   acc = 0.594   grad norm = 14.435   grad norm uniform = 29.739   loss each uniform = 5.278   feat norm = 0.422  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.210  exp loss = 0.209  adjusted loss = 0.209  adv prob = 0.250000   acc = 0.955   grad norm = 1.718   grad norm uniform = 38.226   loss each uniform = 11.258   feat norm = 0.452  
+Current lr: 0.001000
+Current validation accuracy: 0.8632193803787231
+
+
+Epoch [278]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.054  
+Average loss each uniform: 12.230  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.756   loss each uniform = 12.359   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 41.669   loss each uniform = 9.816   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.019   grad norm uniform = 36.893   loss each uniform = 8.646   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.325   loss each uniform = 12.411   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.683  
+Average sample loss: 0.662  
+Average acc: 0.857  
+Average grad norm: 5.602  
+Average grad norm uniform: 33.994  
+Average loss each uniform: 8.804  
+Average feat norm: 0.452  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.012  exp loss = 0.007  adjusted loss = 0.007  adv prob = 0.250000   acc = 0.996   grad norm = 0.263   grad norm uniform = 34.442   loss each uniform = 11.816   feat norm = 0.428  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.090  exp loss = 1.182  adjusted loss = 1.182  adv prob = 0.250000   acc = 0.762   grad norm = 9.732   grad norm uniform = 33.087   loss each uniform = 5.890   feat norm = 0.481  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.099  exp loss = 2.226  adjusted loss = 2.226  adv prob = 0.250000   acc = 0.602   grad norm = 13.913   grad norm uniform = 30.605   loss each uniform = 5.480   feat norm = 0.428  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.198  exp loss = 0.198  adjusted loss = 0.198  adv prob = 0.250000   acc = 0.955   grad norm = 1.564   grad norm uniform = 38.984   loss each uniform = 11.762   feat norm = 0.459  
+Current lr: 0.001000
+Current validation accuracy: 0.8565471172332764
+
+
+Epoch [279]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.004  
+Average grad norm uniform: 36.044  
+Average loss each uniform: 12.192  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.756   loss each uniform = 12.333   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.009   grad norm uniform = 41.659   loss each uniform = 9.846   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.024   grad norm uniform = 37.249   loss each uniform = 8.886   feat norm = 0.434  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 39.265   loss each uniform = 12.307   feat norm = 0.446  
+
+Validation:
+Average incurred loss: 0.770  
+Average sample loss: 0.752  
+Average acc: 0.832  
+Average grad norm: 6.373  
+Average grad norm uniform: 33.629  
+Average loss each uniform: 8.438  
+Average feat norm: 0.449  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.022  exp loss = 0.013  adjusted loss = 0.013  adv prob = 0.250000   acc = 0.987   grad norm = 0.408   grad norm uniform = 33.738   loss each uniform = 11.046   feat norm = 0.421  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.422  exp loss = 1.528  adjusted loss = 1.528  adv prob = 0.250000   acc = 0.689   grad norm = 12.275   grad norm uniform = 32.528   loss each uniform = 5.441   feat norm = 0.481  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.721  exp loss = 1.875  adjusted loss = 1.875  adv prob = 0.250000   acc = 0.647   grad norm = 11.811   grad norm uniform = 30.982   loss each uniform = 5.660   feat norm = 0.424  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.155  exp loss = 0.160  adjusted loss = 0.160  adv prob = 0.250000   acc = 0.970   grad norm = 1.203   grad norm uniform = 39.752   loss each uniform = 12.562   feat norm = 0.459  
+Current lr: 0.001000
+Current validation accuracy: 0.8315262794494629
+
+
+Epoch [280]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.051  
+Average loss each uniform: 12.241  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.747   loss each uniform = 12.376   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.007   grad norm uniform = 41.646   loss each uniform = 9.839   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.018   grad norm uniform = 37.058   loss each uniform = 8.827   feat norm = 0.433  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.337   loss each uniform = 12.393   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.680  
+Average sample loss: 0.663  
+Average acc: 0.852  
+Average grad norm: 5.714  
+Average grad norm uniform: 33.491  
+Average loss each uniform: 8.502  
+Average feat norm: 0.446  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.015  exp loss = 0.009  adjusted loss = 0.009  adv prob = 0.250000   acc = 0.991   grad norm = 0.314   grad norm uniform = 33.640   loss each uniform = 11.256   feat norm = 0.420  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.145  exp loss = 1.236  adjusted loss = 1.236  adv prob = 0.250000   acc = 0.745   grad norm = 10.292   grad norm uniform = 32.509   loss each uniform = 5.600   feat norm = 0.475  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.892  exp loss = 2.021  adjusted loss = 2.021  adv prob = 0.250000   acc = 0.632   grad norm = 12.878   grad norm uniform = 30.799   loss each uniform = 5.508   feat norm = 0.425  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.179  exp loss = 0.177  adjusted loss = 0.177  adv prob = 0.250000   acc = 0.962   grad norm = 1.474   grad norm uniform = 39.098   loss each uniform = 11.990   feat norm = 0.458  
+Current lr: 0.001000
+Current validation accuracy: 0.8523769378662109
+
+
+Epoch [281]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.046  
+Average loss each uniform: 12.243  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.739   loss each uniform = 12.375   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 41.682   loss each uniform = 9.917   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.014   grad norm uniform = 37.003   loss each uniform = 8.868   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.341   loss each uniform = 12.391   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.637  
+Average sample loss: 0.616  
+Average acc: 0.868  
+Average grad norm: 5.233  
+Average grad norm uniform: 34.048  
+Average loss each uniform: 8.790  
+Average feat norm: 0.449  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.010  exp loss = 0.006  adjusted loss = 0.006  adv prob = 0.250000   acc = 0.998   grad norm = 0.209   grad norm uniform = 34.233   loss each uniform = 11.810   feat norm = 0.424  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.947  exp loss = 1.022  adjusted loss = 1.022  adv prob = 0.250000   acc = 0.790   grad norm = 8.696   grad norm uniform = 33.499   loss each uniform = 5.985   feat norm = 0.479  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.171  exp loss = 2.321  adjusted loss = 2.321  adv prob = 0.250000   acc = 0.602   grad norm = 14.217   grad norm uniform = 30.558   loss each uniform = 5.390   feat norm = 0.426  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.214  exp loss = 0.222  adjusted loss = 0.222  adv prob = 0.250000   acc = 0.955   grad norm = 1.756   grad norm uniform = 38.807   loss each uniform = 11.412   feat norm = 0.458  
+Current lr: 0.001000
+Current validation accuracy: 0.8682235479354858
+
+
+Epoch [282]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.044  
+Average loss each uniform: 12.244  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.734   loss each uniform = 12.379   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 41.605   loss each uniform = 9.895   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.021   grad norm uniform = 37.122   loss each uniform = 8.961   feat norm = 0.433  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.357   loss each uniform = 12.382   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.646  
+Average sample loss: 0.624  
+Average acc: 0.871  
+Average grad norm: 5.184  
+Average grad norm uniform: 34.695  
+Average loss each uniform: 9.141  
+Average feat norm: 0.457  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.009  exp loss = 0.005  adjusted loss = 0.005  adv prob = 0.250000   acc = 0.998   grad norm = 0.191   grad norm uniform = 34.825   loss each uniform = 12.299   feat norm = 0.431  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.944  exp loss = 1.025  adjusted loss = 1.025  adv prob = 0.250000   acc = 0.798   grad norm = 8.440   grad norm uniform = 34.508   loss each uniform = 6.349   feat norm = 0.490  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.267  exp loss = 2.439  adjusted loss = 2.439  adv prob = 0.250000   acc = 0.594   grad norm = 14.636   grad norm uniform = 30.535   loss each uniform = 5.468   feat norm = 0.428  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.220  exp loss = 0.224  adjusted loss = 0.224  adv prob = 0.250000   acc = 0.955   grad norm = 1.851   grad norm uniform = 39.049   loss each uniform = 11.510   feat norm = 0.461  
+Current lr: 0.001000
+Current validation accuracy: 0.8707256317138672
+
+
+Epoch [283]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.046  
+Average loss each uniform: 12.252  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.745   loss each uniform = 12.386   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 41.542   loss each uniform = 9.842   feat norm = 0.529  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.014   grad norm uniform = 37.125   loss each uniform = 8.898   feat norm = 0.433  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.338   loss each uniform = 12.404   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.657  
+Average sample loss: 0.636  
+Average acc: 0.866  
+Average grad norm: 5.358  
+Average grad norm uniform: 33.724  
+Average loss each uniform: 8.803  
+Average feat norm: 0.448  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.009  exp loss = 0.006  adjusted loss = 0.006  adv prob = 0.250000   acc = 0.998   grad norm = 0.208   grad norm uniform = 34.147   loss each uniform = 11.892   feat norm = 0.424  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.988  exp loss = 1.063  adjusted loss = 1.063  adv prob = 0.250000   acc = 0.785   grad norm = 8.980   grad norm uniform = 32.979   loss each uniform = 5.949   feat norm = 0.478  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.214  exp loss = 2.356  adjusted loss = 2.356  adv prob = 0.250000   acc = 0.594   grad norm = 14.411   grad norm uniform = 30.201   loss each uniform = 5.378   feat norm = 0.423  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.211  exp loss = 0.207  adjusted loss = 0.207  adv prob = 0.250000   acc = 0.955   grad norm = 1.696   grad norm uniform = 38.378   loss each uniform = 11.384   feat norm = 0.453  
+Current lr: 0.001000
+Current validation accuracy: 0.8657214641571045
+
+
+Epoch [284]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.046  
+Average loss each uniform: 12.259  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.742   loss each uniform = 12.397   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.007   grad norm uniform = 41.540   loss each uniform = 9.774   feat norm = 0.529  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.018   grad norm uniform = 36.967   loss each uniform = 8.706   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.356   loss each uniform = 12.426   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.679  
+Average sample loss: 0.660  
+Average acc: 0.857  
+Average grad norm: 5.610  
+Average grad norm uniform: 33.950  
+Average loss each uniform: 8.738  
+Average feat norm: 0.450  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.016  exp loss = 0.010  adjusted loss = 0.010  adv prob = 0.250000   acc = 0.991   grad norm = 0.313   grad norm uniform = 34.126   loss each uniform = 11.620   feat norm = 0.425  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.117  exp loss = 1.214  adjusted loss = 1.214  adv prob = 0.250000   acc = 0.760   grad norm = 9.925   grad norm uniform = 33.064   loss each uniform = 5.821   feat norm = 0.480  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.969  exp loss = 2.108  adjusted loss = 2.108  adv prob = 0.250000   acc = 0.624   grad norm = 13.206   grad norm uniform = 31.162   loss each uniform = 5.558   feat norm = 0.428  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.182  exp loss = 0.187  adjusted loss = 0.187  adv prob = 0.250000   acc = 0.962   grad norm = 1.491   grad norm uniform = 39.231   loss each uniform = 12.017   feat norm = 0.460  
+Current lr: 0.001000
+Current validation accuracy: 0.8573812246322632
+
+
+Epoch [285]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.029  
+Average loss each uniform: 12.210  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.729   loss each uniform = 12.359   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.010   grad norm uniform = 41.730   loss each uniform = 9.847   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.026   grad norm uniform = 36.920   loss each uniform = 8.771   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 39.292   loss each uniform = 12.312   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.654  
+Average sample loss: 0.634  
+Average acc: 0.866  
+Average grad norm: 5.310  
+Average grad norm uniform: 33.915  
+Average loss each uniform: 8.924  
+Average feat norm: 0.449  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.009  exp loss = 0.005  adjusted loss = 0.005  adv prob = 0.250000   acc = 0.998   grad norm = 0.193   grad norm uniform = 34.356   loss each uniform = 12.090   feat norm = 0.425  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.970  exp loss = 1.048  adjusted loss = 1.048  adv prob = 0.250000   acc = 0.785   grad norm = 8.789   grad norm uniform = 33.333   loss each uniform = 6.052   feat norm = 0.478  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.253  exp loss = 2.371  adjusted loss = 2.371  adv prob = 0.250000   acc = 0.594   grad norm = 14.564   grad norm uniform = 29.999   loss each uniform = 5.371   feat norm = 0.424  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.217  exp loss = 0.220  adjusted loss = 0.220  adv prob = 0.250000   acc = 0.955   grad norm = 1.836   grad norm uniform = 38.324   loss each uniform = 11.427   feat norm = 0.453  
+Current lr: 0.001000
+Current validation accuracy: 0.8657214641571045
+
+
+Epoch [286]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.038  
+Average loss each uniform: 12.234  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.741   loss each uniform = 12.380   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.011   grad norm uniform = 41.599   loss each uniform = 9.800   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.017   grad norm uniform = 36.860   loss each uniform = 8.536   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.318   loss each uniform = 12.371   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.742  
+Average sample loss: 0.724  
+Average acc: 0.843  
+Average grad norm: 6.155  
+Average grad norm uniform: 33.403  
+Average loss each uniform: 8.451  
+Average feat norm: 0.445  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.021  exp loss = 0.013  adjusted loss = 0.013  adv prob = 0.250000   acc = 0.987   grad norm = 0.405   grad norm uniform = 33.519   loss each uniform = 11.089   feat norm = 0.418  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.339  exp loss = 1.444  adjusted loss = 1.444  adv prob = 0.250000   acc = 0.719   grad norm = 11.616   grad norm uniform = 32.432   loss each uniform = 5.513   feat norm = 0.477  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.757  exp loss = 1.907  adjusted loss = 1.907  adv prob = 0.250000   acc = 0.647   grad norm = 12.031   grad norm uniform = 30.451   loss each uniform = 5.596   feat norm = 0.420  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.164  exp loss = 0.171  adjusted loss = 0.171  adv prob = 0.250000   acc = 0.970   grad norm = 1.339   grad norm uniform = 39.349   loss each uniform = 12.335   feat norm = 0.456  
+Current lr: 0.001000
+Current validation accuracy: 0.8432026505470276
+
+
+Epoch [287]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.022  
+Average loss each uniform: 12.207  
+Average feat norm: 0.436  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.738   loss each uniform = 12.355   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.010   grad norm uniform = 41.618   loss each uniform = 9.910   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.026   grad norm uniform = 36.751   loss each uniform = 8.630   feat norm = 0.430  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 39.259   loss each uniform = 12.306   feat norm = 0.446  
+
+Validation:
+Average incurred loss: 0.631  
+Average sample loss: 0.610  
+Average acc: 0.871  
+Average grad norm: 5.108  
+Average grad norm uniform: 34.048  
+Average loss each uniform: 8.970  
+Average feat norm: 0.450  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.007  exp loss = 0.005  adjusted loss = 0.005  adv prob = 0.250000   acc = 0.998   grad norm = 0.177   grad norm uniform = 34.424   loss each uniform = 12.142   feat norm = 0.426  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.905  exp loss = 0.974  adjusted loss = 0.974  adv prob = 0.250000   acc = 0.803   grad norm = 8.234   grad norm uniform = 33.639   loss each uniform = 6.184   feat norm = 0.479  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.266  exp loss = 2.416  adjusted loss = 2.416  adv prob = 0.250000   acc = 0.579   grad norm = 14.727   grad norm uniform = 29.850   loss each uniform = 5.325   feat norm = 0.425  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.224  exp loss = 0.225  adjusted loss = 0.225  adv prob = 0.250000   acc = 0.955   grad norm = 1.848   grad norm uniform = 38.360   loss each uniform = 11.235   feat norm = 0.454  
+Current lr: 0.001000
+Current validation accuracy: 0.8707256317138672
+
+
+Epoch [288]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.038  
+Average loss each uniform: 12.259  
+Average feat norm: 0.437  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.728   loss each uniform = 12.396   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 41.658   loss each uniform = 9.924   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.019   grad norm uniform = 37.053   loss each uniform = 8.940   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.339   loss each uniform = 12.390   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.753  
+Average sample loss: 0.735  
+Average acc: 0.842  
+Average grad norm: 6.219  
+Average grad norm uniform: 33.995  
+Average loss each uniform: 8.609  
+Average feat norm: 0.452  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.022  exp loss = 0.014  adjusted loss = 0.014  adv prob = 0.250000   acc = 0.987   grad norm = 0.420   grad norm uniform = 34.015   loss each uniform = 11.218   feat norm = 0.424  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.366  exp loss = 1.478  adjusted loss = 1.478  adv prob = 0.250000   acc = 0.712   grad norm = 11.746   grad norm uniform = 32.880   loss each uniform = 5.596   feat norm = 0.482  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.765  exp loss = 1.930  adjusted loss = 1.930  adv prob = 0.250000   acc = 0.654   grad norm = 12.161   grad norm uniform = 31.405   loss each uniform = 5.804   feat norm = 0.430  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.163  exp loss = 0.166  adjusted loss = 0.166  adv prob = 0.250000   acc = 0.970   grad norm = 1.271   grad norm uniform = 40.420   loss each uniform = 12.808   feat norm = 0.466  
+Current lr: 0.001000
+Current validation accuracy: 0.8415346145629883
+
+
+Epoch [289]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.029  
+Average loss each uniform: 12.227  
+Average feat norm: 0.436  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.727   loss each uniform = 12.369   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.008   grad norm uniform = 41.721   loss each uniform = 9.966   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.017   grad norm uniform = 36.956   loss each uniform = 8.816   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 39.298   loss each uniform = 12.332   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.842  
+Average sample loss: 0.823  
+Average acc: 0.822  
+Average grad norm: 6.873  
+Average grad norm uniform: 33.754  
+Average loss each uniform: 8.366  
+Average feat norm: 0.452  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.038  exp loss = 0.024  adjusted loss = 0.024  adv prob = 0.250000   acc = 0.983   grad norm = 0.606   grad norm uniform = 33.693   loss each uniform = 10.633   feat norm = 0.423  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.669  exp loss = 1.795  adjusted loss = 1.795  adv prob = 0.250000   acc = 0.650   grad norm = 13.815   grad norm uniform = 32.432   loss each uniform = 5.332   feat norm = 0.482  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.476  exp loss = 1.648  adjusted loss = 1.648  adv prob = 0.250000   acc = 0.707   grad norm = 10.382   grad norm uniform = 31.662   loss each uniform = 6.050   feat norm = 0.429  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.139  exp loss = 0.154  adjusted loss = 0.154  adv prob = 0.250000   acc = 0.977   grad norm = 1.046   grad norm uniform = 40.692   loss each uniform = 13.352   feat norm = 0.466  
+Current lr: 0.001000
+Current validation accuracy: 0.8223519325256348
+
+
+Epoch [290]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.041  
+Average loss each uniform: 12.290  
+Average feat norm: 0.436  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.731   loss each uniform = 12.417   feat norm = 0.429  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 41.664   loss each uniform = 9.994   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.017   grad norm uniform = 37.009   loss each uniform = 8.810   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.346   loss each uniform = 12.457   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.604  
+Average sample loss: 0.582  
+Average acc: 0.878  
+Average grad norm: 4.865  
+Average grad norm uniform: 34.117  
+Average loss each uniform: 9.047  
+Average feat norm: 0.450  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.004  exp loss = 0.002  adjusted loss = 0.002  adv prob = 0.250000   acc = 0.998   grad norm = 0.098   grad norm uniform = 34.676   loss each uniform = 12.361   feat norm = 0.427  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.765  exp loss = 0.820  adjusted loss = 0.820  adv prob = 0.250000   acc = 0.833   grad norm = 7.196   grad norm uniform = 33.858   loss each uniform = 6.384   feat norm = 0.479  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.498  exp loss = 2.666  adjusted loss = 2.666  adv prob = 0.250000   acc = 0.549   grad norm = 16.151   grad norm uniform = 29.423   loss each uniform = 5.199   feat norm = 0.426  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.252  exp loss = 0.260  adjusted loss = 0.260  adv prob = 0.250000   acc = 0.947   grad norm = 2.147   grad norm uniform = 37.758   loss each uniform = 10.584   feat norm = 0.453  
+Current lr: 0.001000
+Current validation accuracy: 0.8782318830490112
+
+
+Epoch [291]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.028  
+Average loss each uniform: 12.274  
+Average feat norm: 0.436  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.708   loss each uniform = 12.406   feat norm = 0.428  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.012   grad norm uniform = 41.688   loss each uniform = 9.997   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.020   grad norm uniform = 37.149   loss each uniform = 8.827   feat norm = 0.433  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.354   loss each uniform = 12.415   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.683  
+Average sample loss: 0.663  
+Average acc: 0.852  
+Average grad norm: 5.648  
+Average grad norm uniform: 33.567  
+Average loss each uniform: 8.596  
+Average feat norm: 0.447  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.015  exp loss = 0.009  adjusted loss = 0.009  adv prob = 0.250000   acc = 0.991   grad norm = 0.305   grad norm uniform = 33.828   loss each uniform = 11.401   feat norm = 0.423  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.150  exp loss = 1.242  adjusted loss = 1.242  adv prob = 0.250000   acc = 0.745   grad norm = 10.168   grad norm uniform = 32.735   loss each uniform = 5.726   feat norm = 0.477  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.903  exp loss = 2.044  adjusted loss = 2.044  adv prob = 0.250000   acc = 0.624   grad norm = 12.797   grad norm uniform = 30.348   loss each uniform = 5.499   feat norm = 0.422  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.174  exp loss = 0.173  adjusted loss = 0.173  adv prob = 0.250000   acc = 0.970   grad norm = 1.422   grad norm uniform = 38.790   loss each uniform = 11.899   feat norm = 0.453  
+Current lr: 0.001000
+Current validation accuracy: 0.8523769974708557
+
+
+Epoch [292]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.031  
+Average loss each uniform: 12.292  
+Average feat norm: 0.436  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.709   loss each uniform = 12.422   feat norm = 0.428  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 41.671   loss each uniform = 9.996   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.018   grad norm uniform = 36.959   loss each uniform = 8.826   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.375   loss each uniform = 12.445   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.659  
+Average sample loss: 0.639  
+Average acc: 0.866  
+Average grad norm: 5.452  
+Average grad norm uniform: 34.249  
+Average loss each uniform: 8.881  
+Average feat norm: 0.455  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.011  exp loss = 0.007  adjusted loss = 0.007  adv prob = 0.250000   acc = 0.998   grad norm = 0.240   grad norm uniform = 34.602   loss each uniform = 11.935   feat norm = 0.431  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.026  exp loss = 1.112  adjusted loss = 1.112  adv prob = 0.250000   acc = 0.783   grad norm = 9.315   grad norm uniform = 33.562   loss each uniform = 6.024   feat norm = 0.486  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.100  exp loss = 2.247  adjusted loss = 2.247  adv prob = 0.250000   acc = 0.602   grad norm = 13.962   grad norm uniform = 30.689   loss each uniform = 5.447   feat norm = 0.429  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.206  exp loss = 0.212  adjusted loss = 0.212  adv prob = 0.250000   acc = 0.955   grad norm = 1.712   grad norm uniform = 38.977   loss each uniform = 11.603   feat norm = 0.460  
+Current lr: 0.001000
+Current validation accuracy: 0.8657214641571045
+
+
+Epoch [293]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.038  
+Average loss each uniform: 12.314  
+Average feat norm: 0.436  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.722   loss each uniform = 12.438   feat norm = 0.428  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 41.721   loss each uniform = 9.985   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.016   grad norm uniform = 36.919   loss each uniform = 8.874   feat norm = 0.430  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 39.357   loss each uniform = 12.489   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.659  
+Average sample loss: 0.639  
+Average acc: 0.860  
+Average grad norm: 5.478  
+Average grad norm uniform: 33.575  
+Average loss each uniform: 8.632  
+Average feat norm: 0.446  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.012  exp loss = 0.007  adjusted loss = 0.007  adv prob = 0.250000   acc = 0.996   grad norm = 0.247   grad norm uniform = 33.779   loss each uniform = 11.522   feat norm = 0.419  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.044  exp loss = 1.114  adjusted loss = 1.114  adv prob = 0.250000   acc = 0.768   grad norm = 9.462   grad norm uniform = 32.701   loss each uniform = 5.793   feat norm = 0.475  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.048  exp loss = 2.173  adjusted loss = 2.173  adv prob = 0.250000   acc = 0.609   grad norm = 13.731   grad norm uniform = 30.634   loss each uniform = 5.406   feat norm = 0.425  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.195  exp loss = 0.196  adjusted loss = 0.196  adv prob = 0.250000   acc = 0.955   grad norm = 1.630   grad norm uniform = 38.860   loss each uniform = 11.660   feat norm = 0.457  
+Current lr: 0.001000
+Current validation accuracy: 0.859883189201355
+
+
+Epoch [294]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.021  
+Average loss each uniform: 12.264  
+Average feat norm: 0.436  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.003   grad norm uniform = 34.716   loss each uniform = 12.402   feat norm = 0.428  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 41.644   loss each uniform = 10.040   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.018   grad norm uniform = 36.804   loss each uniform = 8.473   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.319   loss each uniform = 12.396   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.816  
+Average sample loss: 0.800  
+Average acc: 0.830  
+Average grad norm: 6.628  
+Average grad norm uniform: 34.114  
+Average loss each uniform: 8.575  
+Average feat norm: 0.455  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.033  exp loss = 0.020  adjusted loss = 0.020  adv prob = 0.250000   acc = 0.985   grad norm = 0.546   grad norm uniform = 33.976   loss each uniform = 10.974   feat norm = 0.426  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.579  exp loss = 1.709  adjusted loss = 1.709  adv prob = 0.250000   acc = 0.674   grad norm = 13.112   grad norm uniform = 33.074   loss each uniform = 5.539   feat norm = 0.489  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.550  exp loss = 1.708  adjusted loss = 1.708  adv prob = 0.250000   acc = 0.692   grad norm = 10.676   grad norm uniform = 31.546   loss each uniform = 6.076   feat norm = 0.427  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.158  exp loss = 0.161  adjusted loss = 0.161  adv prob = 0.250000   acc = 0.970   grad norm = 1.215   grad norm uniform = 40.804   loss each uniform = 13.288   feat norm = 0.466  
+Current lr: 0.001000
+Current validation accuracy: 0.8298581838607788
+
+
+Epoch [295]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.018  
+Average loss each uniform: 12.252  
+Average feat norm: 0.436  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.691   loss each uniform = 12.414   feat norm = 0.428  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.014   grad norm uniform = 41.719   loss each uniform = 9.994   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.016   grad norm uniform = 37.142   loss each uniform = 8.896   feat norm = 0.433  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.355   loss each uniform = 12.285   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.618  
+Average sample loss: 0.594  
+Average acc: 0.875  
+Average grad norm: 4.952  
+Average grad norm uniform: 34.495  
+Average loss each uniform: 9.155  
+Average feat norm: 0.454  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.003  exp loss = 0.002  adjusted loss = 0.002  adv prob = 0.250000   acc = 1.000   grad norm = 0.077   grad norm uniform = 34.751   loss each uniform = 12.542   feat norm = 0.428  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.721  exp loss = 0.780  adjusted loss = 0.780  adv prob = 0.250000   acc = 0.839   grad norm = 6.937   grad norm uniform = 34.862   loss each uniform = 6.566   feat norm = 0.488  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.758  exp loss = 2.902  adjusted loss = 2.902  adv prob = 0.250000   acc = 0.496   grad norm = 17.626   grad norm uniform = 28.803   loss each uniform = 5.168   feat norm = 0.426  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.282  exp loss = 0.281  adjusted loss = 0.281  adv prob = 0.250000   acc = 0.940   grad norm = 2.444   grad norm uniform = 38.002   loss each uniform = 10.323   feat norm = 0.458  
+Current lr: 0.001000
+Current validation accuracy: 0.8748957514762878
+
+
+Epoch [296]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.012  
+Average loss each uniform: 12.256  
+Average feat norm: 0.436  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.681   loss each uniform = 12.420   feat norm = 0.428  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.007   grad norm uniform = 41.694   loss each uniform = 10.031   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.001  adjusted loss = 0.001  adv prob = 0.250000   acc = 1.000   grad norm = 0.028   grad norm uniform = 36.794   loss each uniform = 8.529   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 39.384   loss each uniform = 12.300   feat norm = 0.448  
+
+Validation:
+Average incurred loss: 0.631  
+Average sample loss: 0.610  
+Average acc: 0.868  
+Average grad norm: 5.138  
+Average grad norm uniform: 34.464  
+Average loss each uniform: 9.036  
+Average feat norm: 0.455  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.007  exp loss = 0.004  adjusted loss = 0.004  adv prob = 0.250000   acc = 0.998   grad norm = 0.167   grad norm uniform = 34.813   loss each uniform = 12.221   feat norm = 0.431  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.896  exp loss = 0.970  adjusted loss = 0.970  adv prob = 0.250000   acc = 0.800   grad norm = 8.228   grad norm uniform = 34.080   loss each uniform = 6.240   feat norm = 0.485  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.294  exp loss = 2.429  adjusted loss = 2.429  adv prob = 0.250000   acc = 0.571   grad norm = 14.969   grad norm uniform = 30.194   loss each uniform = 5.369   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.230  exp loss = 0.232  adjusted loss = 0.232  adv prob = 0.250000   acc = 0.947   grad norm = 1.937   grad norm uniform = 38.854   loss each uniform = 11.317   feat norm = 0.461  
+Current lr: 0.001000
+Current validation accuracy: 0.8682235479354858
+
+
+Epoch [297]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.024  
+Average loss each uniform: 12.314  
+Average feat norm: 0.436  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.679   loss each uniform = 12.459   feat norm = 0.428  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 41.651   loss each uniform = 9.991   feat norm = 0.531  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.015   grad norm uniform = 37.076   loss each uniform = 8.860   feat norm = 0.433  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.439   loss each uniform = 12.419   feat norm = 0.448  
+
+Validation:
+Average incurred loss: 0.691  
+Average sample loss: 0.671  
+Average acc: 0.856  
+Average grad norm: 5.677  
+Average grad norm uniform: 33.955  
+Average loss each uniform: 8.749  
+Average feat norm: 0.451  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.014  exp loss = 0.008  adjusted loss = 0.008  adv prob = 0.250000   acc = 0.994   grad norm = 0.271   grad norm uniform = 34.173   loss each uniform = 11.717   feat norm = 0.425  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.126  exp loss = 1.231  adjusted loss = 1.231  adv prob = 0.250000   acc = 0.753   grad norm = 10.033   grad norm uniform = 33.373   loss each uniform = 5.833   feat norm = 0.484  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.046  exp loss = 2.194  adjusted loss = 2.194  adv prob = 0.250000   acc = 0.624   grad norm = 13.545   grad norm uniform = 30.181   loss each uniform = 5.444   feat norm = 0.423  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.192  exp loss = 0.211  adjusted loss = 0.211  adv prob = 0.250000   acc = 0.962   grad norm = 1.521   grad norm uniform = 38.996   loss each uniform = 11.852   feat norm = 0.457  
+Current lr: 0.001000
+Current validation accuracy: 0.8557131290435791
+
+
+Epoch [298]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.002  
+Average grad norm uniform: 36.019  
+Average loss each uniform: 12.285  
+Average feat norm: 0.436  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.001   grad norm uniform = 34.685   loss each uniform = 12.441   feat norm = 0.428  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.007   grad norm uniform = 41.804   loss each uniform = 9.958   feat norm = 0.532  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.016   grad norm uniform = 36.904   loss each uniform = 8.711   feat norm = 0.431  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.004   grad norm uniform = 39.377   loss each uniform = 12.363   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.641  
+Average sample loss: 0.619  
+Average acc: 0.869  
+Average grad norm: 5.211  
+Average grad norm uniform: 33.932  
+Average loss each uniform: 8.871  
+Average feat norm: 0.450  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.006  exp loss = 0.004  adjusted loss = 0.004  adv prob = 0.250000   acc = 0.998   grad norm = 0.154   grad norm uniform = 34.245   loss each uniform = 11.998   feat norm = 0.424  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.913  exp loss = 0.987  adjusted loss = 0.987  adv prob = 0.250000   acc = 0.800   grad norm = 8.389   grad norm uniform = 33.558   loss each uniform = 6.089   feat norm = 0.481  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 2.338  exp loss = 2.487  adjusted loss = 2.487  adv prob = 0.250000   acc = 0.571   grad norm = 15.217   grad norm uniform = 29.636   loss each uniform = 5.308   feat norm = 0.424  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.216  exp loss = 0.223  adjusted loss = 0.223  adv prob = 0.250000   acc = 0.955   grad norm = 1.830   grad norm uniform = 38.434   loss each uniform = 11.199   feat norm = 0.456  
+Current lr: 0.001000
+Current validation accuracy: 0.8690575361251831
+
+
+Epoch [299]:
+Training:
+Average incurred loss: 0.000  
+Average sample loss: 0.000  
+Average acc: 1.000  
+Average grad norm: 0.003  
+Average grad norm uniform: 36.014  
+Average loss each uniform: 12.282  
+Average feat norm: 0.436  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 3498]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.002   grad norm uniform = 34.686   loss each uniform = 12.433   feat norm = 0.428  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 184]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.006   grad norm uniform = 41.675   loss each uniform = 10.063   feat norm = 0.530  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 56]:	loss = 0.001  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.021   grad norm uniform = 36.932   loss each uniform = 8.749   feat norm = 0.432  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1057]:	loss = 0.000  exp loss = 0.000  adjusted loss = 0.000  adv prob = 0.250000   acc = 1.000   grad norm = 0.005   grad norm uniform = 39.376   loss each uniform = 12.358   feat norm = 0.447  
+
+Validation:
+Average incurred loss: 0.730  
+Average sample loss: 0.711  
+Average acc: 0.849  
+Average grad norm: 6.050  
+Average grad norm uniform: 33.904  
+Average loss each uniform: 8.622  
+Average feat norm: 0.451  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.017  exp loss = 0.010  adjusted loss = 0.010  adv prob = 0.250000   acc = 0.989   grad norm = 0.352   grad norm uniform = 33.898   loss each uniform = 11.421   feat norm = 0.423  
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.259  exp loss = 1.352  adjusted loss = 1.352  adv prob = 0.250000   acc = 0.734   grad norm = 11.107   grad norm uniform = 33.087   loss each uniform = 5.650   feat norm = 0.483  
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.936  exp loss = 2.076  adjusted loss = 2.076  adv prob = 0.250000   acc = 0.639   grad norm = 12.986   grad norm uniform = 30.950   loss each uniform = 5.593   feat norm = 0.426  
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.177  exp loss = 0.184  adjusted loss = 0.184  adv prob = 0.250000   acc = 0.970   grad norm = 1.403   grad norm uniform = 39.738   loss each uniform = 12.240   feat norm = 0.462  
+Current lr: 0.001000
+Current validation accuracy: 0.8490408658981323
+

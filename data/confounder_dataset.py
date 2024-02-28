@@ -27,6 +27,7 @@ class ConfounderDataset(Dataset):
                 self.data_dir,
                 self.filename_array[idx])
             img = Image.open(img_filename).convert('RGB')
+            # print("finished reading image")
             # Figure out split and transform accordingly
             if self.split_array[idx] == self.split_dict['train'] and self.train_transform:
                 img = self.train_transform(img)

@@ -24,10 +24,10 @@ class CelebADataset(ConfounderDataset):
 
         # Read in attributes
         self.attrs_df = pd.read_csv(
-            os.path.join(root_dir, 'data', 'list_attr_celeba.csv'))
+            os.path.join(root_dir, 'CelebA', 'list_attr_celeba.csv'))
 
         # Split out filenames and attribute names
-        self.data_dir = os.path.join(self.root_dir, 'data', 'img_align_celeba')
+        self.data_dir = os.path.join(self.root_dir, 'CelebA', 'img_align_celeba')
         self.filename_array = self.attrs_df['image_id'].values
         self.attrs_df = self.attrs_df.drop(labels='image_id', axis='columns')
         self.attr_names = self.attrs_df.columns.copy()
@@ -55,7 +55,7 @@ class CelebADataset(ConfounderDataset):
 
         # Read in train/val/test splits
         self.split_df = pd.read_csv(
-            os.path.join(root_dir, 'data', 'list_eval_partition.csv'))
+            os.path.join(root_dir, 'CelebA', 'list_eval_partition.csv'))
         self.split_array = self.split_df['partition'].values
         self.split_dict = {
             'train': 0,
