@@ -20,3 +20,4 @@ cd /nethome/chuang475/flash/projects/group_DRO
                     --print_grad_loss \
                     --uniform_loss \
                     --print_feat \
+                    --resume \
