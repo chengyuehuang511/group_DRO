@@ -16,9 +16,10 @@ cd /nethome/chuang475/flash/projects/group_DRO
                     --save_best \
                     --save_last \
                     --show_progress \
-                    --log_dir ./logs_fix \
+                    --log_dir ./logs_reweight_classes \
                     --print_grad_loss \
                     --uniform_loss \
                     --print_feat \
+                    --reweight_classes \
                     # --checkpoint_dir ./logs_metrics_tmp_2 \
                     # --inference

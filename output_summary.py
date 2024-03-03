@@ -37,12 +37,12 @@ def summary(output):
                     print(f"Compare {a} and {b}", compare(g, a, b))
 
 
-def summary_epoch_group(output, column_list, name_list, criterion='loss', split="train", axs=None):
+def summary_epoch_group(output, column_list, name_list, color, criterion='loss', split="train", axs=None):
     marker_styles = ['o', 's', '^', 'D', '*', 'p', 'h', '+', 'x', 'd']
 
     # plt.figure(figsize=(9, 6))
     for i, (column, name) in enumerate(zip(column_list, name_list)):
-        axs.plot(output[column], label=name, marker=marker_styles[i], markersize=2)
+        axs.plot(output[column], label=name, marker=marker_styles[i], markersize=2, color=color[i])
 
     # Adding title and labels
     if criterion == "loss_each_uniform":
@@ -181,17 +181,19 @@ if __name__ == "__main__":
 
             if dataset == "waterbird":
                 name_list = [f'Landbird on Land ({count[0]})', f'Landbird on Water ({count[1]})', f'Waterbird on Land ({count[2]})', f'Waterbid on Water ({count[3]})']
+                color_list = ['darkred', 'lightcoral', 'lightblue', 'darkblue']
             elif dataset == "celebA":
                 name_list = [f'Non-blond Hair, Female ({count[0]})', f'Non-blond Hair, Male ({count[1]})', f'Blond Hair, Female ({count[2]})', f'Blond Hair, Male ({count[3]})']
+                color_list = ['lightcoral', 'darkred', 'darkblue', 'lightblue']
             
             fig, axs = plt.subplots(3, 2, figsize=(10, 10))
 
-            summary_epoch_group(output, loss_column_list, name_list, criterion='loss', split=split, axs=axs[0, 0])
-            summary_epoch_group(output, avg_group_grad_norm, name_list, criterion='grad_norm', split=split, axs=axs[0, 1])
-            summary_epoch_group(output, acc_column_list, name_list, criterion='accuracy', split=split, axs=axs[1, 0])
-            summary_epoch_group(output, avg_group_feat_norm, name_list, criterion='feat_norm', split=split, axs=axs[1, 1])
-            summary_epoch_group(output, avg_group_loss_each_uniform, name_list, criterion='loss_each_uniform', split=split, axs=axs[2, 0])
-            summary_epoch_group(output, avg_group_grad_norm_uniform, name_list, criterion='grad_norm_uniform', split=split, axs=axs[2, 1])
+            summary_epoch_group(output, loss_column_list, name_list, criterion='loss', split=split, axs=axs[0, 0], color=color_list)
+            summary_epoch_group(output, avg_group_grad_norm, name_list, criterion='grad_norm', split=split, axs=axs[0, 1], color=color_list)
+            summary_epoch_group(output, acc_column_list, name_list, criterion='accuracy', split=split, axs=axs[1, 0], color=color_list)
+            summary_epoch_group(output, avg_group_feat_norm, name_list, criterion='feat_norm', split=split, axs=axs[1, 1], color=color_list)
+            summary_epoch_group(output, avg_group_loss_each_uniform, name_list, criterion='loss_each_uniform', split=split, axs=axs[2, 0], color=color_list)
+            summary_epoch_group(output, avg_group_grad_norm_uniform, name_list, criterion='grad_norm_uniform', split=split, axs=axs[2, 1], color=color_list)
 
             handles, labels = axs[0, 0].get_legend_handles_labels()
             if split == "train":
@@ -209,6 +211,7 @@ if __name__ == "__main__":
             fig.supxlabel("Epoch", fontsize=14)
             
             fig.tight_layout()
+            # fig.savefig(f'plot_{dataset}/{split}/{dataset}_avg_criterion_groups_{split}_reweight_classes.png', format='png', dpi=300)
             fig.savefig(f'plot_{dataset}/{split}/{dataset}_avg_criterion_groups_{split}.png', format='png', dpi=300)
     
     summary_wrt_epoch_per_group("waterbird", "logs_fix", 100)

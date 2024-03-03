@@ -40,15 +40,23 @@ class DRODataset(Dataset):
         for x,y,g in self:
             return x.size()
 
-    def get_loader(self, train, reweight_groups, **kwargs):
+    def get_loader(self, train, reweight_groups, reweight_classes, **kwargs):
         if not train: # Validation or testing
-            assert reweight_groups is None
+            assert (reweight_groups is None) and (reweight_classes is None), "Cannot reweight groups/classes during validation/testing"
             shuffle = False
             sampler = None
-        elif not reweight_groups: # Training but not reweighting
+        elif (not reweight_groups) and (not reweight_classes): # Training but not reweighting groups/classes
             print("Training without reweighting")
             shuffle = True
             sampler = None
+        elif reweight_classes: # Training and reweighting classes
+            print("Reweighting classes")
+            class_weights = len(self)/self._y_counts
+            weights = class_weights[self._y_array]
+
+            # Replacement needs to be set to True, otherwise we'll run out of minority samples
+            sampler = WeightedRandomSampler(weights, len(self), replacement=True)
+            shuffle = False
         else: # Training and reweighting
             print("Reweighting groups")
             # When the --robust flag is not set, reweighting changes the loss function

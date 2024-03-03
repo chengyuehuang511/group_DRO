@@ -31,6 +31,7 @@ def main():
     parser.add_argument('--fraction', type=float, default=1.0)
     parser.add_argument('--root_dir', default=None)
     parser.add_argument('--reweight_groups', action='store_true', default=False)
+    parser.add_argument('--reweight_classes', action='store_true', default=False)
     parser.add_argument('--augment_data', action='store_true', default=False)
     parser.add_argument('--val_fraction', type=float, default=0.1)
     # Objective
@@ -108,10 +109,10 @@ def main():
         train_data, val_data = prepare_data(args, train=True)
 
     loader_kwargs = {'batch_size':args.batch_size, 'num_workers':4, 'pin_memory':True}
-    train_loader = train_data.get_loader(train=True, reweight_groups=args.reweight_groups, **loader_kwargs)
-    val_loader = val_data.get_loader(train=False, reweight_groups=None, **loader_kwargs)
+    train_loader = train_data.get_loader(train=True, reweight_groups=args.reweight_groups, reweight_classes=args.reweight_classes, **loader_kwargs)
+    val_loader = val_data.get_loader(train=False, reweight_groups=None, reweight_classes=None, **loader_kwargs)
     if test_data is not None:
-        test_loader = test_data.get_loader(train=False, reweight_groups=None, **loader_kwargs)
+        test_loader = test_data.get_loader(train=False, reweight_groups=None, reweight_classes=None, **loader_kwargs)
 
     data = {}
     data['train_loader'] = train_loader
