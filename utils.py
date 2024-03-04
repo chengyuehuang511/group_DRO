@@ -51,6 +51,7 @@ class CSVBatchLogger:
             columns.append(f'avg_group_grad_norm_uniform:{idx}')
             columns.append(f'avg_group_loss_each_uniform:{idx}')
             columns.append(f'avg_group_feat_norm:{idx}')
+            columns.append(f'avg_group_largest_confidence:{idx}')
             
         columns.append('avg_actual_loss')
         columns.append('avg_per_sample_loss')
@@ -62,6 +63,7 @@ class CSVBatchLogger:
         columns.append('avg_grad_norm_uniform')
         columns.append('avg_loss_each_uniform')
         columns.append('avg_feat_norm')
+        columns.append('avg_largest_confidence')
 
         self.path = csv_path
         self.file = open(csv_path, mode)

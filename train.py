@@ -19,7 +19,7 @@ from pytorch_transformers import AdamW, WarmupLinearSchedule
 
 def run_epoch(epoch, model, optimizer, loader, loss_computer, logger, csv_logger, args,
               is_training, show_progress=False, log_every=50, scheduler=None, criterion=None,
-              print_grad_loss=False, print_feat=False, uniform_loss=False, choose_gradients="last_block", flatten=False, feat_type='top'):
+              print_grad_loss=False, print_feat=False, uniform_loss=False, print_focal=False, choose_gradients="last_block", flatten=False, feat_type='top'):
     """
     scheduler is only used inside this function if model is bert.
     """
@@ -78,11 +78,18 @@ def run_epoch(epoch, model, optimizer, loader, loss_computer, logger, csv_logger
             if print_feat:
                 feat = get_feature(model, x, feat_type=feat_type, flatten=flatten)
                 feat_norm = torch.norm(F.relu(feat), dim=[2,3]).mean(1)  # [128, 2048, 7, 7]
+            
+            if print_focal:
+                largest_confidence = torch.max(F.softmax(outputs, dim=1), dim=1).values.detach()
+                # print("print focal", torch.log(F.softmax(outputs, dim=1)))
+                # print(largest_confidence)
 
             # print("Memory allocated before loss_main: {}".format(torch.cuda.memory_allocated()))
             # 1
-            loss_main = loss_computer.loss(outputs, y, g, is_training, grad_norm, grad_norm_uniform, loss_each_uniform, feat_norm)
-            assert loss_each.mean() == loss_main
+            loss_main = loss_computer.loss(outputs, y, g, is_training, grad_norm, grad_norm_uniform, loss_each_uniform, feat_norm, largest_confidence)
+            
+            if print_grad_loss:
+                assert loss_each.mean() == loss_main
 
             # print("Memory allocated before backward: {}".format(torch.cuda.memory_allocated()))
 
@@ -156,6 +163,7 @@ def get_grad_loss(model, test_data, targets, loss_function, choose_gradients="la
         temp = 1
         predictions = predictions / temp
         logsoftmax = torch.nn.LogSoftmax(dim=-1).cuda()
+        # print("uniform loss", logsoftmax(predictions))
         loss = torch.sum(-targets_uni * logsoftmax(predictions), dim=-1)
         # print(loss)
     else:
@@ -202,7 +210,7 @@ def get_feature(model, x, feat_type='top', flatten=True):
 def train(model, criterion, dataset,
           logger, train_csv_logger, val_csv_logger, test_csv_logger,
           args, epoch_offset, print_grad_loss=False, print_feat=False,
-          uniform_loss=False):
+          uniform_loss=False, print_focal=False, choose_gradients="last_block", flatten=False, feat_type='top'):
     model = model.cuda()
 
     # process generalization adjustment stuff
@@ -281,7 +289,11 @@ def train(model, criterion, dataset,
             criterion=criterion,
             print_grad_loss=print_grad_loss,
             print_feat=print_feat,
-            uniform_loss=uniform_loss)
+            print_focal=print_focal,
+            uniform_loss=uniform_loss,
+            choose_gradients=choose_gradients,
+            flatten=flatten,
+            feat_type=feat_type)
         
         logger.write(f'\nValidation:\n')
         val_loss_computer = LossComputer(
@@ -299,7 +311,11 @@ def train(model, criterion, dataset,
             print_grad_loss=print_grad_loss,
             print_feat=print_feat,
             criterion=criterion,
-            uniform_loss=uniform_loss)
+            uniform_loss=uniform_loss,
+            print_focal=print_focal,
+            choose_gradients=choose_gradients,
+            flatten=flatten,
+            feat_type=feat_type)
         
         # Test set; don't print to avoid peeking
         if dataset['test_data'] is not None:
@@ -318,7 +334,11 @@ def train(model, criterion, dataset,
                 print_grad_loss=print_grad_loss,
                 print_feat=print_feat,
                 criterion=criterion,
-                uniform_loss=uniform_loss)
+                uniform_loss=uniform_loss,
+                print_focal=print_focal,
+                choose_gradients=choose_gradients,
+                flatten=flatten,
+                feat_type=feat_type)
             
         # Inspect learning rates
         if (epoch+1) % 1 == 0:

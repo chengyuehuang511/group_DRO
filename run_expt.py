@@ -47,6 +47,7 @@ def main():
     parser.add_argument('--print_grad_loss', default=False, action='store_true')
     parser.add_argument('--print_feat', default=False, action='store_true')
     parser.add_argument('--uniform_loss', default=False, action='store_true')
+    parser.add_argument('--print_focal', default=False, action='store_true')
 
     # Model
     parser.add_argument(
@@ -199,7 +200,7 @@ def main():
     test_csv_logger =  CSVBatchLogger(os.path.join(args.log_dir, 'test.csv'), train_data.n_groups, mode=mode)
 
     train(model, criterion, data, logger, train_csv_logger, val_csv_logger, test_csv_logger, args, epoch_offset=epoch_offset, 
-            print_feat=args.print_feat, print_grad_loss=args.print_grad_loss, uniform_loss=args.uniform_loss)
+            print_feat=args.print_feat, print_grad_loss=args.print_grad_loss, uniform_loss=args.uniform_loss, print_focal=args.print_focal)
 
     train_csv_logger.close()
     val_csv_logger.close()

@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 # Function to plot a specific category (either grad_norm or loss)
 def plot_category(data, category, filename):
@@ -42,6 +43,8 @@ def summary_epoch_group(output, column_list, name_list, color, criterion='loss',
 
     # plt.figure(figsize=(9, 6))
     for i, (column, name) in enumerate(zip(column_list, name_list)):
+        if criterion == "largest_confidence":
+            output[column] = output[column].apply(lambda x: np.log(x))
         axs.plot(output[column], label=name, marker=marker_styles[i], markersize=2, color=color[i])
 
     # Adding title and labels
@@ -162,7 +165,9 @@ if __name__ == "__main__":
         acc_column_list = ['avg_acc_group:0', 'avg_acc_group:1', 'avg_acc_group:2', 'avg_acc_group:3']
         avg_group_grad_norm = ['avg_group_grad_norm:0', 'avg_group_grad_norm:1', 'avg_group_grad_norm:2', 'avg_group_grad_norm:3']
         avg_group_grad_norm_uniform = ['avg_group_grad_norm_uniform:0', 'avg_group_grad_norm_uniform:1', 'avg_group_grad_norm_uniform:2', 'avg_group_grad_norm_uniform:3']
-        avg_group_loss_each_uniform = ['avg_group_loss_each_uniform:0', 'avg_group_loss_each_uniform:1', 'avg_group_loss_each_uniform:2', 'avg_group_loss_each_uniform:3']
+        # 1
+        # avg_group_loss_each_uniform = ['avg_group_loss_each_uniform:0', 'avg_group_loss_each_uniform:1', 'avg_group_loss_each_uniform:2', 'avg_group_loss_each_uniform:3']
+        avg_group_loss_each_uniform = ['avg_group_largest_confidence:0', 'avg_group_largest_confidence:1', 'avg_group_largest_confidence:2', 'avg_group_largest_confidence:3']
         avg_group_feat_norm = ['avg_group_feat_norm:0', 'avg_group_feat_norm:1', 'avg_group_feat_norm:2', 'avg_group_feat_norm:3']
 
         for split in ["train", "val", "test"]:
@@ -192,7 +197,9 @@ if __name__ == "__main__":
             summary_epoch_group(output, avg_group_grad_norm, name_list, criterion='grad_norm', split=split, axs=axs[0, 1], color=color_list)
             summary_epoch_group(output, acc_column_list, name_list, criterion='accuracy', split=split, axs=axs[1, 0], color=color_list)
             summary_epoch_group(output, avg_group_feat_norm, name_list, criterion='feat_norm', split=split, axs=axs[1, 1], color=color_list)
-            summary_epoch_group(output, avg_group_loss_each_uniform, name_list, criterion='loss_each_uniform', split=split, axs=axs[2, 0], color=color_list)
+            # 2
+            # summary_epoch_group(output, avg_group_loss_each_uniform, name_list, criterion='loss_each_uniform', split=split, axs=axs[2, 0], color=color_list)
+            summary_epoch_group(output, avg_group_loss_each_uniform, name_list, criterion='largest_confidence', split=split, axs=axs[2, 0], color=color_list)
             summary_epoch_group(output, avg_group_grad_norm_uniform, name_list, criterion='grad_norm_uniform', split=split, axs=axs[2, 1], color=color_list)
 
             handles, labels = axs[0, 0].get_legend_handles_labels()
@@ -211,11 +218,11 @@ if __name__ == "__main__":
             fig.supxlabel("Epoch", fontsize=14)
             
             fig.tight_layout()
-            # fig.savefig(f'plot_{dataset}/{split}/{dataset}_avg_criterion_groups_{split}_reweight_classes.png', format='png', dpi=300)
-            fig.savefig(f'plot_{dataset}/{split}/{dataset}_avg_criterion_groups_{split}.png', format='png', dpi=300)
+            fig.savefig(f'plot_{dataset}/{split}/{dataset}_avg_criterion_groups_{split}_reweight_classes_focal.png', format='png', dpi=300)
+            # fig.savefig(f'plot_{dataset}/{split}/{dataset}_avg_criterion_groups_{split}.png', format='png', dpi=300)
     
-    summary_wrt_epoch_per_group("waterbird", "logs_fix", 100)
-    summary_wrt_epoch_per_group("celebA", "logs_celebA_a40", 50)
+    summary_wrt_epoch_per_group("waterbird", "logs_reweight_classes_focal", 100)
+    # summary_wrt_epoch_per_group("celebA", "logs_reweight_classes_celebA", 50)
 
         
           

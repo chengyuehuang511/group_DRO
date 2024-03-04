@@ -35,13 +35,13 @@ class LossComputer:
 
         self.reset_stats()
 
-    def loss(self, yhat, y, group_idx=None, is_training=False, grad_norm=None, grad_norm_uniform=None, loss_each_uniform=None, feat_norm=None):
+    def loss(self, yhat, y, group_idx=None, is_training=False, grad_norm=None, grad_norm_uniform=None, loss_each_uniform=None, feat_norm=None, largest_confidence=None):
         # compute per-sample and per-group losses
         per_sample_losses = self.criterion(yhat, y)
         group_loss, group_count = self.compute_group_avg(per_sample_losses, group_idx)
         group_acc, group_count = self.compute_group_avg((torch.argmax(yhat,1)==y).float(), group_idx)
 
-        group_grad_norm, group_grad_norm_uniform, group_loss_each_uniform, group_feat_norm = None, None, None, None
+        group_grad_norm, group_grad_norm_uniform, group_loss_each_uniform, group_feat_norm, group_largest_confidence = None, None, None, None, None
         if grad_norm is not None:
             group_grad_norm, group_count = self.compute_group_avg(grad_norm, group_idx)
         if grad_norm_uniform is not None:
@@ -50,6 +50,8 @@ class LossComputer:
             group_loss_each_uniform, group_count = self.compute_group_avg(loss_each_uniform, group_idx)
         if feat_norm is not None:
             group_feat_norm, group_count = self.compute_group_avg(feat_norm, group_idx)
+        if largest_confidence is not None:
+            group_largest_confidence, group_count = self.compute_group_avg(largest_confidence, group_idx)
 
         # update historical losses
         self.update_exp_avg_loss(group_loss, group_count)
@@ -65,7 +67,7 @@ class LossComputer:
 
         # update stats
         self.update_stats(actual_loss, group_loss, group_acc, group_count, weights,
-                          group_grad_norm, group_grad_norm_uniform, group_loss_each_uniform, group_feat_norm)  # update batch-wise stats
+                          group_grad_norm, group_grad_norm_uniform, group_loss_each_uniform, group_feat_norm, group_largest_confidence)  # update batch-wise stats
 
         return actual_loss
 
@@ -129,20 +131,22 @@ class LossComputer:
         self.avg_group_grad_norm_uniform = torch.zeros(self.n_groups).cuda()
         self.avg_group_loss_each_uniform = torch.zeros(self.n_groups).cuda()
         self.avg_group_feat_norm = torch.zeros(self.n_groups).cuda()
+        self.avg_group_largest_confidence = torch.zeros(self.n_groups).cuda()
         
-        self.avg_per_sample_loss = 0.
-        self.avg_actual_loss = 0.
-        self.avg_acc = 0.
+        self.avg_per_sample_loss = torch.tensor(0.).cuda()
+        self.avg_actual_loss = torch.tensor(0.).cuda()
+        self.avg_acc = torch.tensor(0.).cuda()
 
-        self.avg_grad_norm = 0.
-        self.avg_grad_norm_uniform = 0.
-        self.avg_loss_each_uniform = 0.
-        self.avg_feat_norm = 0.
+        self.avg_grad_norm = torch.tensor(0.).cuda()
+        self.avg_grad_norm_uniform = torch.tensor(0.).cuda()
+        self.avg_loss_each_uniform = torch.tensor(0.).cuda()
+        self.avg_feat_norm = torch.tensor(0.).cuda()
+        self.avg_largest_confidence = torch.tensor(0.).cuda()
 
-        self.batch_count = 0.
+        self.batch_count = torch.tensor(0.).cuda()
 
     def update_stats(self, actual_loss, group_loss, group_acc, group_count, weights=None,
-                     group_grad_norm=None, group_grad_norm_uniform=None, group_loss_each_uniform=None, group_feat_norm=None):
+                     group_grad_norm=None, group_grad_norm_uniform=None, group_loss_each_uniform=None, group_feat_norm=None, group_largest_confidence=None):
         # avg group loss
         denom = self.processed_data_counts + group_count
         denom += (denom==0).float()
@@ -153,7 +157,7 @@ class LossComputer:
         # avg group acc
         self.avg_group_acc = prev_weight*self.avg_group_acc + curr_weight*group_acc
 
-        # avg group grad norm, grad norm uniform, loss each uniform, feat norm
+        # avg group grad norm, grad norm uniform, loss each uniform, feat norm, largest confidence
         if group_grad_norm is not None:
             self.avg_group_grad_norm = prev_weight*self.avg_group_grad_norm + curr_weight*group_grad_norm
         if group_grad_norm_uniform is not None:
@@ -162,6 +166,8 @@ class LossComputer:
             self.avg_group_loss_each_uniform = prev_weight*self.avg_group_loss_each_uniform + curr_weight*group_loss_each_uniform
         if group_feat_norm is not None:
             self.avg_group_feat_norm = prev_weight*self.avg_group_feat_norm + curr_weight*group_feat_norm
+        if group_largest_confidence is not None:
+            self.avg_group_largest_confidence = prev_weight*self.avg_group_largest_confidence + curr_weight*group_largest_confidence
 
         # batch-wise average actual loss
         denom = self.batch_count + 1
@@ -189,6 +195,8 @@ class LossComputer:
             self.avg_loss_each_uniform = group_frac @ self.avg_group_loss_each_uniform
         if group_feat_norm is not None:
             self.avg_feat_norm = group_frac @ self.avg_group_feat_norm
+        if group_largest_confidence is not None:
+            self.avg_largest_confidence = group_frac @ self.avg_group_largest_confidence
 
     def get_model_stats(self, model, args, stats_dict):
         model_norm_sq = 0.
@@ -212,6 +220,7 @@ class LossComputer:
             stats_dict[f'avg_group_grad_norm_uniform:{idx}'] = self.avg_group_grad_norm_uniform[idx].item()
             stats_dict[f'avg_group_loss_each_uniform:{idx}'] = self.avg_group_loss_each_uniform[idx].item()
             stats_dict[f'avg_group_feat_norm:{idx}'] = self.avg_group_feat_norm[idx].item()
+            stats_dict[f'avg_group_largest_confidence:{idx}'] = self.avg_group_largest_confidence[idx].item()
 
         stats_dict['avg_actual_loss'] = self.avg_actual_loss.item()
         stats_dict['avg_per_sample_loss'] = self.avg_per_sample_loss.item()
@@ -221,6 +230,7 @@ class LossComputer:
         stats_dict['avg_grad_norm_uniform'] = self.avg_grad_norm_uniform.item()
         stats_dict['avg_loss_each_uniform'] = self.avg_loss_each_uniform.item()
         stats_dict['avg_feat_norm'] = self.avg_feat_norm.item()
+        stats_dict['avg_largest_confidence'] = self.avg_largest_confidence.item()
 
         # Model stats
         if model is not None:
@@ -241,6 +251,7 @@ class LossComputer:
         logger.write(f'Average grad norm uniform: {self.avg_grad_norm_uniform.item():.3f}  \n')
         logger.write(f'Average loss each uniform: {self.avg_loss_each_uniform.item():.3f}  \n')
         logger.write(f'Average feat norm: {self.avg_feat_norm.item():.3f}  \n')
+        logger.write(f'Average largest confidence: {self.avg_largest_confidence.item():.3f}  \n')
         
         for group_idx in range(self.n_groups):
             logger.write(
@@ -254,5 +265,6 @@ class LossComputer:
                 f'grad norm = {self.avg_group_grad_norm[group_idx]:.3f}   '
                 f'grad norm uniform = {self.avg_group_grad_norm_uniform[group_idx]:.3f}   '
                 f'loss each uniform = {self.avg_group_loss_each_uniform[group_idx]:.3f}   '
-                f'feat norm = {self.avg_group_feat_norm[group_idx]:.3f}  \n')
+                f'feat norm = {self.avg_group_feat_norm[group_idx]:.3f}   '
+                f'largest confidence = {self.avg_group_largest_confidence[group_idx]:.3f}  \n')
         logger.flush()

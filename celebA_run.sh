@@ -16,9 +16,10 @@ cd /nethome/chuang475/flash/projects/group_DRO
                     --save_best \
                     --save_last \
                     --show_progress \
-                    --log_dir ./logs_reweight_classes_celebA \
-                    --print_grad_loss \
-                    --uniform_loss \
-                    --print_feat \
+                    --log_dir ./logs_reweight_classes_focal_celebA \
+                    --print_focal \
                     --reweight_classes \
+                    # --print_grad_loss \
+                    # --uniform_loss \
+                    # --print_feat \
                     # --resume \
